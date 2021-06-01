@@ -49,12 +49,12 @@ public:
     QHBoxLayout *horizontalLayout_6;
     QLabel *label;
     QSpacerItem *horizontalSpacer_7;
-    QLineEdit *lineEdit;
+    QLineEdit *username;
     QWidget *horizontalWidget_5;
     QHBoxLayout *horizontalLayout_7;
     QLabel *label_2;
     QSpacerItem *horizontalSpacer_8;
-    QLineEdit *lineEdit_2;
+    QLineEdit *password;
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_8;
     QPushButton *sign_up;
@@ -76,6 +76,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(-1, 5, -1, -1);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -203,10 +204,10 @@ public:
 
         horizontalLayout_6->addItem(horizontalSpacer_7);
 
-        lineEdit = new QLineEdit(horizontalWidget_4);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        username = new QLineEdit(horizontalWidget_4);
+        username->setObjectName(QString::fromUtf8("username"));
 
-        horizontalLayout_6->addWidget(lineEdit);
+        horizontalLayout_6->addWidget(username);
 
 
         verticalLayout_7->addWidget(horizontalWidget_4);
@@ -225,10 +226,11 @@ public:
 
         horizontalLayout_7->addItem(horizontalSpacer_8);
 
-        lineEdit_2 = new QLineEdit(horizontalWidget_5);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        password = new QLineEdit(horizontalWidget_5);
+        password->setObjectName(QString::fromUtf8("password"));
+        password->setEchoMode(QLineEdit::Password);
 
-        horizontalLayout_7->addWidget(lineEdit_2);
+        horizontalLayout_7->addWidget(password);
 
 
         verticalLayout_7->addWidget(horizontalWidget_5);
