@@ -243,7 +243,7 @@ public:
         search->setText(QApplication::translate("menu", "Search", nullptr));
         show_all->setText(QApplication::translate("menu", "show all of the books", nullptr));
         categories->setText(QApplication::translate("menu", "categories", nullptr));
-        borrow->setText(QApplication::translate("menu", "borrow", nullptr));
+        borrow->setText(QApplication::translate("menu", "Borrow", nullptr));
     } // retranslateUi
 
 };

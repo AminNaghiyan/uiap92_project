@@ -2,6 +2,7 @@
     <qresource prefix="/icons">
         <file>close.png</file>
         <file>reload.png</file>
+        <file>back.png</file>
     </qresource>
     <qresource prefix="/pictures">
         <file>logo.png</file>
