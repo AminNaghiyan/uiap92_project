@@ -13,7 +13,6 @@
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
@@ -54,7 +53,6 @@ public:
     QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_5;
     QPushButton *pushButton_2;
-    QLabel *label;
     QSpacerItem *horizontalSpacer_8;
 
     void setupUi(QWidget *del)
@@ -64,7 +62,7 @@ public:
         del->resize(800, 600);
         verticalLayout = new QVBoxLayout(del);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(5, 5, 5, 5);
+        verticalLayout->setContentsMargins(5, 0, 5, 5);
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(-1, 0, -1, 0);
@@ -141,7 +139,7 @@ public:
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(textBrowser_2->sizePolicy().hasHeightForWidth());
         textBrowser_2->setSizePolicy(sizePolicy2);
-        textBrowser_2->setMaximumSize(QSize(475, 67));
+        textBrowser_2->setMaximumSize(QSize(475, 68));
 
         horizontalLayout_3->addWidget(textBrowser_2);
 
@@ -224,11 +222,6 @@ public:
 
         horizontalLayout_5->addWidget(pushButton_2);
 
-        label = new QLabel(del);
-        label->setObjectName(QString::fromUtf8("label"));
-
-        horizontalLayout_5->addWidget(label);
-
         horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_5->addItem(horizontalSpacer_8);
@@ -261,7 +254,6 @@ public:
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">Enter name of the book you want to delete:</span></p></body></html>", nullptr));
         delete_2->setText(QApplication::translate("del", "Delete", nullptr));
         pushButton_2->setText(QString());
-        label->setText(QApplication::translate("del", "back", nullptr));
     } // retranslateUi
 
 };
