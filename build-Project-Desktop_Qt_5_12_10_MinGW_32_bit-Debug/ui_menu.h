@@ -105,8 +105,8 @@ public:
         add = new QPushButton(menu);
         add->setObjectName(QString::fromUtf8("add"));
         QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Fixed);
-        sizePolicy1.setHorizontalStretch(210);
-        sizePolicy1.setVerticalStretch(226);
+        sizePolicy1.setHorizontalStretch(201);
+        sizePolicy1.setVerticalStretch(218);
         sizePolicy1.setHeightForWidth(add->sizePolicy().hasHeightForWidth());
         add->setSizePolicy(sizePolicy1);
         add->setMinimumSize(QSize(0, 70));

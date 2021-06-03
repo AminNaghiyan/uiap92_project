@@ -122,8 +122,8 @@
           <widget class="QPushButton" name="add">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-             <horstretch>210</horstretch>
-             <verstretch>226</verstretch>
+             <horstretch>201</horstretch>
+             <verstretch>218</verstretch>
             </sizepolicy>
            </property>
            <property name="minimumSize">

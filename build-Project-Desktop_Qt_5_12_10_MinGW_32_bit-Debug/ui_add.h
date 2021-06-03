@@ -186,11 +186,11 @@ public:
         name->setObjectName(QString::fromUtf8("name"));
         QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(100);
+        sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(name->sizePolicy().hasHeightForWidth());
         name->setSizePolicy(sizePolicy2);
         name->setMinimumSize(QSize(0, 30));
-        name->setMaximumSize(QSize(16777215, 100));
+        name->setMaximumSize(QSize(16777215, 16777215));
 
         horizontalLayout_4->addWidget(name);
 
