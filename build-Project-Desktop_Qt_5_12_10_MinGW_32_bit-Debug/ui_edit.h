@@ -31,6 +31,8 @@ public:
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *close_2;
+    QSpacerItem *horizontalSpacer_21;
+    QPushButton *pushButton;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *close;
     QSpacerItem *verticalSpacer_3;
@@ -78,18 +80,23 @@ public:
     QPushButton *edit_2;
     QSpacerItem *horizontalSpacer_14;
     QSpacerItem *verticalSpacer;
+    QHBoxLayout *horizontalLayout_10;
+    QSpacerItem *horizontalSpacer_17;
+    QTextBrowser *textBrowser;
+    QSpacerItem *horizontalSpacer_20;
+    QSpacerItem *verticalSpacer_10;
 
     void setupUi(QWidget *edit)
     {
         if (edit->objectName().isEmpty())
             edit->setObjectName(QString::fromUtf8("edit"));
-        edit->resize(800, 700);
+        edit->resize(800, 800);
         verticalLayout = new QVBoxLayout(edit);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(-1, 5, -1, -1);
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(-1, 0, -1, 0);
+        verticalLayout_2->setContentsMargins(-1, 0, -1, 10);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(-1, 0, -1, -1);
@@ -112,6 +119,20 @@ public:
 
         horizontalLayout->addWidget(close_2);
 
+        horizontalSpacer_21 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_21);
+
+        pushButton = new QPushButton(edit);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setMinimumSize(QSize(60, 40));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/icons/reload.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton->setIcon(icon1);
+        pushButton->setIconSize(QSize(50, 40));
+
+        horizontalLayout->addWidget(pushButton);
+
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer_2);
@@ -121,9 +142,9 @@ public:
         sizePolicy.setHeightForWidth(close->sizePolicy().hasHeightForWidth());
         close->setSizePolicy(sizePolicy);
         close->setMinimumSize(QSize(60, 40));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/icons/close.png"), QSize(), QIcon::Normal, QIcon::Off);
-        close->setIcon(icon1);
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/icons/close.png"), QSize(), QIcon::Normal, QIcon::Off);
+        close->setIcon(icon2);
         close->setIconSize(QSize(50, 40));
 
         horizontalLayout->addWidget(close);
@@ -170,7 +191,7 @@ public:
 
         lineEdit = new QLineEdit(edit);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setMinimumSize(QSize(0, 30));
+        lineEdit->setMinimumSize(QSize(0, 35));
         lineEdit->setMaximumSize(QSize(16777215, 50));
 
         horizontalLayout_4->addWidget(lineEdit);
@@ -226,7 +247,7 @@ public:
 
         lineEdit_2 = new QLineEdit(edit);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setMinimumSize(QSize(0, 30));
+        lineEdit_2->setMinimumSize(QSize(0, 35));
 
         horizontalLayout_2->addWidget(lineEdit_2);
 
@@ -255,7 +276,7 @@ public:
 
         lineEdit_3 = new QLineEdit(edit);
         lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
-        lineEdit_3->setMinimumSize(QSize(0, 30));
+        lineEdit_3->setMinimumSize(QSize(0, 35));
 
         horizontalLayout_6->addWidget(lineEdit_3);
 
@@ -284,7 +305,7 @@ public:
 
         lineEdit_4 = new QLineEdit(edit);
         lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
-        lineEdit_4->setMinimumSize(QSize(0, 30));
+        lineEdit_4->setMinimumSize(QSize(0, 35));
 
         horizontalLayout_7->addWidget(lineEdit_4);
 
@@ -313,7 +334,7 @@ public:
 
         lineEdit_5 = new QLineEdit(edit);
         lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
-        lineEdit_5->setMinimumSize(QSize(0, 30));
+        lineEdit_5->setMinimumSize(QSize(0, 37));
 
         horizontalLayout_8->addWidget(lineEdit_5);
 
@@ -350,9 +371,35 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_9);
 
-        verticalSpacer = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::Preferred);
 
         verticalLayout_2->addItem(verticalSpacer);
+
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
+        horizontalLayout_10->setContentsMargins(-1, 0, -1, -1);
+        horizontalSpacer_17 = new QSpacerItem(200, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer_17);
+
+        textBrowser = new QTextBrowser(edit);
+        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
+        sizePolicy.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
+        textBrowser->setSizePolicy(sizePolicy);
+        textBrowser->setMaximumSize(QSize(400, 50));
+
+        horizontalLayout_10->addWidget(textBrowser);
+
+        horizontalSpacer_20 = new QSpacerItem(200, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer_20);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_10);
+
+        verticalSpacer_10 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_10);
 
 
         verticalLayout->addLayout(verticalLayout_2);
@@ -367,6 +414,7 @@ public:
     {
         edit->setWindowTitle(QApplication::translate("edit", "Form", nullptr));
         close_2->setText(QString());
+        pushButton->setText(QString());
         close->setText(QString());
         textBrowser_2->setHtml(QApplication::translate("edit", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"

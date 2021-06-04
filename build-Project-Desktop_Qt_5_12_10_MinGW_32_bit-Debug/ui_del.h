@@ -30,6 +30,8 @@ public:
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *pushButton_2;
+    QSpacerItem *horizontalSpacer_13;
+    QPushButton *relode;
     QSpacerItem *horizontalSpacer_11;
     QPushButton *pushButton;
     QSpacerItem *verticalSpacer_2;
@@ -52,14 +54,18 @@ public:
     QSpacerItem *horizontalSpacer_9;
     QPushButton *delete_2;
     QSpacerItem *horizontalSpacer_10;
+    QSpacerItem *verticalSpacer_6;
+    QHBoxLayout *horizontalLayout_7;
+    QSpacerItem *horizontalSpacer_8;
+    QTextBrowser *textBrowser_3;
+    QSpacerItem *horizontalSpacer_12;
     QSpacerItem *verticalSpacer;
-    QHBoxLayout *horizontalLayout_5;
 
     void setupUi(QWidget *del)
     {
         if (del->objectName().isEmpty())
             del->setObjectName(QString::fromUtf8("del"));
-        del->resize(800, 600);
+        del->resize(800, 660);
         verticalLayout = new QVBoxLayout(del);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(5, 0, 5, 5);
@@ -89,6 +95,22 @@ public:
 
         horizontalLayout->addWidget(pushButton_2);
 
+        horizontalSpacer_13 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_13);
+
+        relode = new QPushButton(del);
+        relode->setObjectName(QString::fromUtf8("relode"));
+        sizePolicy.setHeightForWidth(relode->sizePolicy().hasHeightForWidth());
+        relode->setSizePolicy(sizePolicy);
+        relode->setMinimumSize(QSize(60, 40));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/icons/reload.png"), QSize(), QIcon::Normal, QIcon::Off);
+        relode->setIcon(icon1);
+        relode->setIconSize(QSize(50, 40));
+
+        horizontalLayout->addWidget(relode);
+
         horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer_11);
@@ -101,9 +123,9 @@ public:
         sizePolicy1.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy1);
         pushButton->setMinimumSize(QSize(60, 40));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/icons/close.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton->setIcon(icon1);
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/icons/close.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton->setIcon(icon2);
         pushButton->setIconSize(QSize(50, 40));
 
         horizontalLayout->addWidget(pushButton);
@@ -148,7 +170,7 @@ public:
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(-1, 0, -1, -1);
-        horizontalSpacer_4 = new QSpacerItem(200, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_4 = new QSpacerItem(140, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         horizontalLayout_3->addItem(horizontalSpacer_4);
 
@@ -156,11 +178,11 @@ public:
         textBrowser_2->setObjectName(QString::fromUtf8("textBrowser_2"));
         sizePolicy.setHeightForWidth(textBrowser_2->sizePolicy().hasHeightForWidth());
         textBrowser_2->setSizePolicy(sizePolicy);
-        textBrowser_2->setMaximumSize(QSize(475, 68));
+        textBrowser_2->setMaximumSize(QSize(481, 68));
 
         horizontalLayout_3->addWidget(textBrowser_2);
 
-        horizontalSpacer_5 = new QSpacerItem(200, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_5 = new QSpacerItem(140, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         horizontalLayout_3->addItem(horizontalSpacer_5);
 
@@ -219,15 +241,35 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_6);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer_6 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_6);
+
+        horizontalLayout_7 = new QHBoxLayout();
+        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
+        horizontalLayout_7->setContentsMargins(-1, 0, -1, -1);
+        horizontalSpacer_8 = new QSpacerItem(200, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_8);
+
+        textBrowser_3 = new QTextBrowser(del);
+        textBrowser_3->setObjectName(QString::fromUtf8("textBrowser_3"));
+        sizePolicy.setHeightForWidth(textBrowser_3->sizePolicy().hasHeightForWidth());
+        textBrowser_3->setSizePolicy(sizePolicy);
+        textBrowser_3->setMaximumSize(QSize(500, 60));
+
+        horizontalLayout_7->addWidget(textBrowser_3);
+
+        horizontalSpacer_12 = new QSpacerItem(200, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_12);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_7);
+
+        verticalSpacer = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer);
-
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        horizontalLayout_5->setContentsMargins(-1, 0, -1, -1);
-
-        verticalLayout_2->addLayout(horizontalLayout_5);
 
 
         verticalLayout->addLayout(verticalLayout_2);
@@ -242,6 +284,7 @@ public:
     {
         del->setWindowTitle(QApplication::translate("del", "Form", nullptr));
         pushButton_2->setText(QString());
+        relode->setText(QString());
         pushButton->setText(QString());
         textBrowser->setHtml(QApplication::translate("del", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"

@@ -78,7 +78,7 @@ public:
     {
         if (search->objectName().isEmpty())
             search->setObjectName(QString::fromUtf8("search"));
-        search->resize(800, 600);
+        search->resize(800, 700);
         verticalLayout = new QVBoxLayout(search);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout_2 = new QVBoxLayout();
@@ -258,7 +258,7 @@ public:
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
         horizontalLayout_6->setContentsMargins(-1, 0, -1, -1);
-        horizontalSpacer_14 = new QSpacerItem(134, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_14 = new QSpacerItem(150, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         horizontalLayout_6->addItem(horizontalSpacer_14);
 
@@ -276,7 +276,7 @@ public:
 
         horizontalLayout_6->addWidget(year_of_publication);
 
-        horizontalSpacer_15 = new QSpacerItem(186, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_15 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_6->addItem(horizontalSpacer_15);
 
