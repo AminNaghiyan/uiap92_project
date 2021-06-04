@@ -68,13 +68,18 @@ public:
     QLabel *year_of_publication;
     QLineEdit *lineEdit_2;
     QSpacerItem *horizontalSpacer_13;
+    QSpacerItem *verticalSpacer;
+    QHBoxLayout *horizontalLayout_8;
+    QSpacerItem *horizontalSpacer_16;
+    QPushButton *add_2;
+    QSpacerItem *horizontalSpacer_14;
     QSpacerItem *verticalSpacer_5;
 
     void setupUi(QWidget *add)
     {
         if (add->objectName().isEmpty())
             add->setObjectName(QString::fromUtf8("add"));
-        add->resize(800, 648);
+        add->resize(800, 805);
         verticalLayout = new QVBoxLayout(add);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(5, 5, 5, 5);
@@ -299,6 +304,33 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout_7);
 
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_3->addItem(verticalSpacer);
+
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
+        horizontalLayout_8->setContentsMargins(-1, 0, -1, -1);
+        horizontalSpacer_16 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_16);
+
+        add_2 = new QPushButton(add);
+        add_2->setObjectName(QString::fromUtf8("add_2"));
+        sizePolicy.setHeightForWidth(add_2->sizePolicy().hasHeightForWidth());
+        add_2->setSizePolicy(sizePolicy);
+        add_2->setMinimumSize(QSize(100, 60));
+        add_2->setMaximumSize(QSize(300, 16777215));
+
+        horizontalLayout_8->addWidget(add_2);
+
+        horizontalSpacer_14 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_14);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_8);
+
         verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_3->addItem(verticalSpacer_5);
@@ -334,6 +366,7 @@ public:
         label_2->setText(QApplication::translate("add", "Author :", nullptr));
         label_3->setText(QApplication::translate("add", "Publisher :", nullptr));
         year_of_publication->setText(QApplication::translate("add", "Year of publication :", nullptr));
+        add_2->setText(QApplication::translate("add", "Add", nullptr));
     } // retranslateUi
 
 };
