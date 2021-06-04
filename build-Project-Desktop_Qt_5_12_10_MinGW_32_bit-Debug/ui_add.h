@@ -30,6 +30,8 @@ public:
     QVBoxLayout *verticalLayout_2;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
+    QPushButton *pushButton;
+    QSpacerItem *horizontalSpacer_15;
     QPushButton *close;
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_2;
@@ -67,15 +69,12 @@ public:
     QLineEdit *lineEdit_2;
     QSpacerItem *horizontalSpacer_13;
     QSpacerItem *verticalSpacer_5;
-    QHBoxLayout *horizontalLayout_8;
-    QPushButton *back;
-    QSpacerItem *horizontalSpacer_14;
 
     void setupUi(QWidget *add)
     {
         if (add->objectName().isEmpty())
             add->setObjectName(QString::fromUtf8("add"));
-        add->resize(800, 700);
+        add->resize(800, 648);
         verticalLayout = new QVBoxLayout(add);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(5, 5, 5, 5);
@@ -89,6 +88,19 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
+        pushButton = new QPushButton(add);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/icons/back.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton->setIcon(icon);
+        pushButton->setIconSize(QSize(60, 40));
+
+        horizontalLayout->addWidget(pushButton);
+
+        horizontalSpacer_15 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_15);
+
         close = new QPushButton(add);
         close->setObjectName(QString::fromUtf8("close"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -97,9 +109,9 @@ public:
         sizePolicy.setHeightForWidth(close->sizePolicy().hasHeightForWidth());
         close->setSizePolicy(sizePolicy);
         close->setMinimumSize(QSize(60, 40));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/icons/close.png"), QSize(), QIcon::Normal, QIcon::Off);
-        close->setIcon(icon);
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/icons/close.png"), QSize(), QIcon::Normal, QIcon::Off);
+        close->setIcon(icon1);
         close->setIconSize(QSize(60, 40));
 
         horizontalLayout->addWidget(close);
@@ -291,28 +303,6 @@ public:
 
         verticalLayout_3->addItem(verticalSpacer_5);
 
-        horizontalLayout_8 = new QHBoxLayout();
-        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
-        horizontalLayout_8->setContentsMargins(-1, 0, -1, -1);
-        back = new QPushButton(add);
-        back->setObjectName(QString::fromUtf8("back"));
-        sizePolicy.setHeightForWidth(back->sizePolicy().hasHeightForWidth());
-        back->setSizePolicy(sizePolicy);
-        back->setMinimumSize(QSize(60, 40));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/icons/back.png"), QSize(), QIcon::Normal, QIcon::Off);
-        back->setIcon(icon1);
-        back->setIconSize(QSize(60, 50));
-
-        horizontalLayout_8->addWidget(back);
-
-        horizontalSpacer_14 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_8->addItem(horizontalSpacer_14);
-
-
-        verticalLayout_3->addLayout(horizontalLayout_8);
-
 
         verticalLayout_2->addLayout(verticalLayout_3);
 
@@ -328,6 +318,7 @@ public:
     void retranslateUi(QWidget *add)
     {
         add->setWindowTitle(QApplication::translate("add", "Form", nullptr));
+        pushButton->setText(QString());
         close->setText(QString());
         textBrowser->setHtml(QApplication::translate("add", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -343,7 +334,6 @@ public:
         label_2->setText(QApplication::translate("add", "Author :", nullptr));
         label_3->setText(QApplication::translate("add", "Publisher :", nullptr));
         year_of_publication->setText(QApplication::translate("add", "Year of publication :", nullptr));
-        back->setText(QString());
     } // retranslateUi
 
 };
