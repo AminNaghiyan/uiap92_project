@@ -56,14 +56,5 @@ void add::on_add_2_clicked()
 
     booklist.append(w) ;
 
-    QFile file(books) ;
-    file.open(QIODevice::WriteOnly | QIODevice::Append) ;
-    QTextStream qts(&file);
-    qts << this->ui->name->text()  + '\n' ;
-    qts << this->ui->author->text() + '\n' ;
-    qts << this->ui->publisher->text()  + '\n' ;
-    qts << this->ui->year_of_publication->text() + '\n' ;
-    file.close() ;
-
     this->ui->textBrowser_3->append("The book was added.") ;
 }

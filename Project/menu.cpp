@@ -32,7 +32,7 @@ void menu::on_add_clicked()
 void menu::on_delete_2_clicked()
 {
     this->hide();
-    del *f = new del ;
+    del *f = new del(book_list) ;
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
 }
