@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 
 #include <QApplication>
+class pook {
+
+};
 
 int main(int argc, char *argv[])
 {

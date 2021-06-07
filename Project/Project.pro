@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     add.cpp \
+    book.cpp \
     borrow.cpp \
     categories.cpp \
     del.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
 
 HEADERS += \
     add.h \
+    book.h \
     borrow.h \
     categories.h \
     del.h \

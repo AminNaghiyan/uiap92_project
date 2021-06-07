@@ -14,7 +14,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
 void MainWindow::on_close_clicked()
 {
     this->close();
@@ -53,7 +52,7 @@ void MainWindow::on_Login_clicked()
             if(qsl == this->ui->password->text()){
                 this->hide();
 
-                menu *f = new menu;
+                menu *f = new menu();
                 f->setAttribute(Qt::WA_DeleteOnClose);
                 f->show();
                 mmd=true ;

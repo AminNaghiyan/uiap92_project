@@ -28,6 +28,7 @@ class Ui_add
 public:
     QVBoxLayout *verticalLayout;
     QVBoxLayout *verticalLayout_2;
+    QWidget *widget;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *pushButton;
@@ -67,8 +68,8 @@ public:
     QSpacerItem *verticalSpacer_8;
     QHBoxLayout *horizontalLayout_7;
     QSpacerItem *horizontalSpacer_12;
-    QLabel *year_of_publication;
-    QLineEdit *lineEdit_2;
+    QLabel *lable_10;
+    QLineEdit *year_of_publication;
     QSpacerItem *horizontalSpacer_13;
     QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_8;
@@ -86,21 +87,28 @@ public:
     {
         if (add->objectName().isEmpty())
             add->setObjectName(QString::fromUtf8("add"));
-        add->resize(800, 975);
+        add->resize(800, 876);
         verticalLayout = new QVBoxLayout(add);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(5, 5, 5, 5);
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(-1, 0, -1, 0);
-        horizontalLayout = new QHBoxLayout();
+        widget = new QWidget(add);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
+        widget->setSizePolicy(sizePolicy);
+        horizontalLayout = new QHBoxLayout(widget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(-1, 0, -1, -1);
+        horizontalLayout->setContentsMargins(-1, 1, -1, -1);
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        pushButton = new QPushButton(add);
+        pushButton = new QPushButton(widget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/icons/back.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -113,13 +121,13 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_17);
 
-        reload = new QPushButton(add);
+        reload = new QPushButton(widget);
         reload->setObjectName(QString::fromUtf8("reload"));
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy.setHorizontalStretch(60);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(reload->sizePolicy().hasHeightForWidth());
-        reload->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(60);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(reload->sizePolicy().hasHeightForWidth());
+        reload->setSizePolicy(sizePolicy1);
         reload->setMinimumSize(QSize(60, 40));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/icons/reload.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -132,13 +140,13 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_15);
 
-        close = new QPushButton(add);
+        close = new QPushButton(widget);
         close->setObjectName(QString::fromUtf8("close"));
-        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(close->sizePolicy().hasHeightForWidth());
-        close->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(close->sizePolicy().hasHeightForWidth());
+        close->setSizePolicy(sizePolicy2);
         close->setMinimumSize(QSize(60, 40));
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/icons/close.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -148,9 +156,9 @@ public:
         horizontalLayout->addWidget(close);
 
 
-        verticalLayout_2->addLayout(horizontalLayout);
+        verticalLayout_2->addWidget(widget);
 
-        verticalSpacer_2 = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_2 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer_2);
 
@@ -163,11 +171,11 @@ public:
 
         textBrowser = new QTextBrowser(add);
         textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(60);
-        sizePolicy2.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
-        textBrowser->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(60);
+        sizePolicy3.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
+        textBrowser->setSizePolicy(sizePolicy3);
         textBrowser->setMinimumSize(QSize(0, 60));
         textBrowser->setMaximumSize(QSize(400, 60));
 
@@ -193,8 +201,8 @@ public:
 
         textBrowser_2 = new QTextBrowser(add);
         textBrowser_2->setObjectName(QString::fromUtf8("textBrowser_2"));
-        sizePolicy1.setHeightForWidth(textBrowser_2->sizePolicy().hasHeightForWidth());
-        textBrowser_2->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(textBrowser_2->sizePolicy().hasHeightForWidth());
+        textBrowser_2->setSizePolicy(sizePolicy2);
         textBrowser_2->setMaximumSize(QSize(484, 56));
 
         horizontalLayout_3->addWidget(textBrowser_2);
@@ -227,11 +235,11 @@ public:
 
         name = new QLineEdit(add);
         name->setObjectName(QString::fromUtf8("name"));
-        QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Fixed);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(name->sizePolicy().hasHeightForWidth());
-        name->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(name->sizePolicy().hasHeightForWidth());
+        name->setSizePolicy(sizePolicy4);
         name->setMinimumSize(QSize(0, 30));
         name->setMaximumSize(QSize(16777215, 16777215));
 
@@ -313,15 +321,15 @@ public:
 
         horizontalLayout_7->addItem(horizontalSpacer_12);
 
-        year_of_publication = new QLabel(add);
+        lable_10 = new QLabel(add);
+        lable_10->setObjectName(QString::fromUtf8("lable_10"));
+
+        horizontalLayout_7->addWidget(lable_10);
+
+        year_of_publication = new QLineEdit(add);
         year_of_publication->setObjectName(QString::fromUtf8("year_of_publication"));
 
         horizontalLayout_7->addWidget(year_of_publication);
-
-        lineEdit_2 = new QLineEdit(add);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-
-        horizontalLayout_7->addWidget(lineEdit_2);
 
         horizontalSpacer_13 = new QSpacerItem(235, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
@@ -343,8 +351,8 @@ public:
 
         add_2 = new QPushButton(add);
         add_2->setObjectName(QString::fromUtf8("add_2"));
-        sizePolicy1.setHeightForWidth(add_2->sizePolicy().hasHeightForWidth());
-        add_2->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(add_2->sizePolicy().hasHeightForWidth());
+        add_2->setSizePolicy(sizePolicy2);
         add_2->setMinimumSize(QSize(100, 60));
         add_2->setMaximumSize(QSize(300, 16777215));
 
@@ -370,8 +378,8 @@ public:
 
         textBrowser_3 = new QTextBrowser(add);
         textBrowser_3->setObjectName(QString::fromUtf8("textBrowser_3"));
-        sizePolicy1.setHeightForWidth(textBrowser_3->sizePolicy().hasHeightForWidth());
-        textBrowser_3->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(textBrowser_3->sizePolicy().hasHeightForWidth());
+        textBrowser_3->setSizePolicy(sizePolicy2);
         textBrowser_3->setMinimumSize(QSize(50, 0));
         textBrowser_3->setMaximumSize(QSize(16777215, 50));
 
@@ -419,7 +427,7 @@ public:
         label->setText(QApplication::translate("add", "Name :", nullptr));
         label_2->setText(QApplication::translate("add", "Author :", nullptr));
         label_3->setText(QApplication::translate("add", "Publisher :", nullptr));
-        year_of_publication->setText(QApplication::translate("add", "Year of publication :", nullptr));
+        lable_10->setText(QApplication::translate("add", "Year of publication :", nullptr));
         add_2->setText(QApplication::translate("add", "Add", nullptr));
     } // retranslateUi
 

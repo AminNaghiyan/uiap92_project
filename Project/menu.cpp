@@ -13,6 +13,8 @@ menu::~menu()
     delete ui;
 }
 
+ QList <book> book_list ;
+
 void menu::on_pushButton_clicked()
 {
     this->close() ;
@@ -22,7 +24,7 @@ void menu::on_pushButton_clicked()
 void menu::on_add_clicked()
 {
     this->hide();
-    add *f=new add ;
+    add *f=new add(book_list) ;
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
 }

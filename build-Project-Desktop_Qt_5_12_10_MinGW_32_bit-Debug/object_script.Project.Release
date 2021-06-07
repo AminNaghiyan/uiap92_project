@@ -1,4 +1,5 @@
 release/add.o
+release/book.o
 release/borrow.o
 release/categories.o
 release/del.o

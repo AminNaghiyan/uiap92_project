@@ -2,6 +2,7 @@
 #define MENU_H
 
 #include <QWidget>
+#include <book.h>
 #include <add.h>
 #include <borrow.h>
 #include <categories.h>

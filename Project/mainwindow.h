@@ -5,7 +5,6 @@
 #include <QFile>
 #include <QTextStream>
 #include <QStringList>
-#include <stdio.h>
 #include<menu.h>
 
 QT_BEGIN_NAMESPACE
