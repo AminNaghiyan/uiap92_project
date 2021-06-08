@@ -11,6 +11,7 @@ debug/main.o
 debug/mainwindow.o
 debug/menu.o
 debug/search.o
+debug/search_category.o
 debug/show_all.o
 debug/qrc_resource.o
 debug/moc_add.o
@@ -23,4 +24,5 @@ debug/moc_edit.o
 debug/moc_mainwindow.o
 debug/moc_menu.o
 debug/moc_search.o
+debug/moc_search_category.o
 debug/moc_show_all.o

@@ -22,6 +22,7 @@ SOURCES += \
     mainwindow.cpp \
     menu.cpp \
     search.cpp \
+    search_category.cpp \
     show_all.cpp
 
 HEADERS += \
@@ -37,6 +38,7 @@ HEADERS += \
     mainwindow.h \
     menu.h \
     search.h \
+    search_category.h \
     show_all.h
 
 FORMS += \
@@ -50,6 +52,7 @@ FORMS += \
     mainwindow.ui \
     menu.ui \
     search.ui \
+    search_category.ui \
     show_all.ui
 
 # Default rules for deployment.

@@ -11,6 +11,7 @@ release/main.o
 release/mainwindow.o
 release/menu.o
 release/search.o
+release/search_category.o
 release/show_all.o
 release/qrc_resource.o
 release/moc_add.o
@@ -23,4 +24,5 @@ release/moc_edit.o
 release/moc_mainwindow.o
 release/moc_menu.o
 release/moc_search.o
+release/moc_search_category.o
 release/moc_show_all.o
