@@ -2,11 +2,7 @@
 #define ADD_H
 
 #include <QWidget>
-#include <book.h>
 #include <menu.h>
-#include<QFile>
-#include<QTextStream>
-#include<QStringList>
 
 namespace Ui {
 class add;

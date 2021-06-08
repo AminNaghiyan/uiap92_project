@@ -55,7 +55,7 @@ void menu::on_search_clicked()
 void menu::on_show_all_clicked()
 {
     this->hide();
-    show_all *f=new show_all ;
+    show_all *f=new show_all(booklist) ;
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
 }
