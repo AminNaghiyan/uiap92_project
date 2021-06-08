@@ -49,6 +49,11 @@ public:
     QSpacerItem *horizontalSpacer_8;
     QPushButton *add_category;
     QSpacerItem *horizontalSpacer_9;
+    QSpacerItem *verticalSpacer_5;
+    QHBoxLayout *horizontalLayout_5;
+    QSpacerItem *horizontalSpacer_10;
+    QTextBrowser *textBrowser_2;
+    QSpacerItem *horizontalSpacer_11;
     QSpacerItem *verticalSpacer;
 
     void setupUi(QWidget *creat_new_category)
@@ -170,7 +175,7 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_3);
 
-        verticalSpacer_4 = new QSpacerItem(20, 80, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer_4);
 
@@ -197,6 +202,33 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_4);
 
+        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_5);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        horizontalLayout_5->setContentsMargins(-1, 0, -1, -1);
+        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_10);
+
+        textBrowser_2 = new QTextBrowser(creat_new_category);
+        textBrowser_2->setObjectName(QString::fromUtf8("textBrowser_2"));
+        sizePolicy.setHeightForWidth(textBrowser_2->sizePolicy().hasHeightForWidth());
+        textBrowser_2->setSizePolicy(sizePolicy);
+        textBrowser_2->setMinimumSize(QSize(400, 0));
+        textBrowser_2->setMaximumSize(QSize(402, 50));
+
+        horizontalLayout_5->addWidget(textBrowser_2);
+
+        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_11);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_5);
+
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_2->addItem(verticalSpacer);
@@ -222,6 +254,11 @@ public:
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.05594pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt;\">Enter name of the category you want to add</span></p></body></html>", nullptr));
         add_category->setText(QApplication::translate("creat_new_category", "Add", nullptr));
+        textBrowser_2->setHtml(QApplication::translate("creat_new_category", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.05594pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.05594pt;\"><br /></p></body></html>", nullptr));
     } // retranslateUi
 
 };

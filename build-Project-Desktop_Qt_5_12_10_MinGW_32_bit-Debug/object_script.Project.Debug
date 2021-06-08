@@ -13,6 +13,7 @@ debug/menu.o
 debug/search.o
 debug/search_category.o
 debug/show_all.o
+debug/show_category.o
 debug/qrc_resource.o
 debug/moc_add.o
 debug/moc_add_to_category.o
@@ -26,3 +27,4 @@ debug/moc_menu.o
 debug/moc_search.o
 debug/moc_search_category.o
 debug/moc_show_all.o
+debug/moc_show_category.o

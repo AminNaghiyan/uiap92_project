@@ -45,6 +45,11 @@ public:
     QLineEdit *lineEdit;
     QSpacerItem *horizontalSpacer_7;
     QSpacerItem *verticalSpacer_4;
+    QHBoxLayout *horizontalLayout_5;
+    QSpacerItem *horizontalSpacer_10;
+    QPushButton *search;
+    QSpacerItem *horizontalSpacer_11;
+    QSpacerItem *verticalSpacer_5;
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer_8;
     QTextBrowser *textBrowser_2;
@@ -55,7 +60,7 @@ public:
     {
         if (search_category->objectName().isEmpty())
             search_category->setObjectName(QString::fromUtf8("search_category"));
-        search_category->resize(800, 600);
+        search_category->resize(800, 700);
         search_category->setMinimumSize(QSize(60, 0));
         verticalLayout = new QVBoxLayout(search_category);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
@@ -167,6 +172,35 @@ public:
 
         verticalLayout_2->addItem(verticalSpacer_4);
 
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        horizontalLayout_5->setContentsMargins(-1, 0, -1, -1);
+        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_10);
+
+        search = new QPushButton(search_category);
+        search->setObjectName(QString::fromUtf8("search"));
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(search->sizePolicy().hasHeightForWidth());
+        search->setSizePolicy(sizePolicy1);
+        search->setMinimumSize(QSize(100, 68));
+
+        horizontalLayout_5->addWidget(search);
+
+        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_11);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_5);
+
+        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer_5);
+
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(-1, 0, -1, -1);
@@ -210,6 +244,7 @@ public:
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.05594pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt;\">Enter the name of the category you are looking for.</span></p></body></html>", nullptr));
+        search->setText(QApplication::translate("search_category", "Search", nullptr));
         textBrowser_2->setHtml(QApplication::translate("search_category", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
