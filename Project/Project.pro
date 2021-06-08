@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     add.cpp \
+    add_to_category.cpp \
     book.cpp \
     borrow.cpp \
     categories.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
 
 HEADERS += \
     add.h \
+    add_to_category.h \
     book.h \
     borrow.h \
     categories.h \
@@ -39,6 +41,7 @@ HEADERS += \
 
 FORMS += \
     add.ui \
+    add_to_category.ui \
     borrow.ui \
     categories.ui \
     creat_new_category.ui \

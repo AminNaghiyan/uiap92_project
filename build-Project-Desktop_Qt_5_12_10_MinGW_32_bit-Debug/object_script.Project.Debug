@@ -1,4 +1,5 @@
 debug/add.o
+debug/add_to_category.o
 debug/book.o
 debug/borrow.o
 debug/categories.o
@@ -13,6 +14,7 @@ debug/search.o
 debug/show_all.o
 debug/qrc_resource.o
 debug/moc_add.o
+debug/moc_add_to_category.o
 debug/moc_borrow.o
 debug/moc_categories.o
 debug/moc_creat_new_category.o

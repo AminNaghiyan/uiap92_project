@@ -42,7 +42,7 @@ public:
     QSpacerItem *verticalSpacer_3;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_6;
-    QLineEdit *lineEdit;
+    QLineEdit *category_name;
     QSpacerItem *horizontalSpacer_7;
     QSpacerItem *verticalSpacer_4;
     QHBoxLayout *horizontalLayout_4;
@@ -156,12 +156,12 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_6);
 
-        lineEdit = new QLineEdit(creat_new_category);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setMinimumSize(QSize(0, 35));
-        lineEdit->setMaximumSize(QSize(16777215, 35));
+        category_name = new QLineEdit(creat_new_category);
+        category_name->setObjectName(QString::fromUtf8("category_name"));
+        category_name->setMinimumSize(QSize(0, 35));
+        category_name->setMaximumSize(QSize(16777215, 35));
 
-        horizontalLayout_3->addWidget(lineEdit);
+        horizontalLayout_3->addWidget(category_name);
 
         horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 

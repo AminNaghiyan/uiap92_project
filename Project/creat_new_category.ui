@@ -268,7 +268,7 @@ p, li { white-space: pre-wrap; }
         </spacer>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit">
+        <widget class="QLineEdit" name="category_name">
          <property name="minimumSize">
           <size>
            <width>0</width>
