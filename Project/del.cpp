@@ -38,7 +38,7 @@ void del::on_relode_clicked()
 void del::on_back_clicked()
 {
     this->close();
-    menu *f = new menu();
+    menu *f = new menu(booklist);
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
 }
@@ -56,5 +56,8 @@ void del::on_delete_2_clicked()
         if(booklist[i]==w)
               booklist.removeAt(i) ;
     }
+
+    (ctfile(booklist)) ;
+
     this->ui->textBrowser_3->append("The book was deleted.") ;
 }

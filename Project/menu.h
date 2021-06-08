@@ -10,6 +10,8 @@
 #include <del.h>
 #include <search.h>
 #include <show_all.h>
+#include<QList>
+#include <ctfile.h>
 
 namespace Ui {
 class menu;
@@ -20,7 +22,8 @@ class menu : public QWidget
     Q_OBJECT
 
 public:
-    explicit menu(QWidget *parent = nullptr);
+    QList <book> booklist ;
+    explicit menu(QList <book> list ,QWidget *parent = nullptr);
     ~menu();
 
 private slots:

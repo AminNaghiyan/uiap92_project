@@ -2,6 +2,7 @@ release/add.o
 release/book.o
 release/borrow.o
 release/categories.o
+release/ctfile.o
 release/del.o
 release/edit.o
 release/main.o

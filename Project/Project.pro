@@ -13,6 +13,7 @@ SOURCES += \
     book.cpp \
     borrow.cpp \
     categories.cpp \
+    ctfile.cpp \
     del.cpp \
     edit.cpp \
     main.cpp \
@@ -26,6 +27,7 @@ HEADERS += \
     book.h \
     borrow.h \
     categories.h \
+    ctfile.h \
     del.h \
     edit.h \
     mainwindow.h \

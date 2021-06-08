@@ -1,18 +1,42 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#define user_pass "user_pass.txt"
+#define user_pass "user_pass"
+#define books "books.txt"
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(QList <book> list , QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    this->booklist=list ;
+
     ui->setupUi(this);
+
+    QFile file(books) ;
+    file.open(QFile::Text | QFile::ReadOnly) ;
+    QTextStream in (&file);
+    if (file.size()!=0){
+        while (!in.atEnd()) {
+            book b ;
+            QString qsl= in.readLine();
+            b.name=qsl ;
+            qsl= in.readLine();
+            b.athor=qsl ;
+            qsl= in.readLine();
+            b.publisher=qsl ;
+            qsl= in.readLine();
+            b.year_of_publication=qsl ;
+
+            this->booklist.append(b) ;
+        }
+    }
+    file.close() ;
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+QList <book> booklist ;
 
 void MainWindow::on_close_clicked()
 {
@@ -52,7 +76,7 @@ void MainWindow::on_Login_clicked()
             if(qsl == this->ui->password->text()){
                 this->hide();
 
-                menu *f = new menu();
+                menu *f = new menu(booklist);
                 f->setAttribute(Qt::WA_DeleteOnClose);
                 f->show();
                 mmd=true ;

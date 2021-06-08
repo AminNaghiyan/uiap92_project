@@ -43,7 +43,7 @@ public:
     QSpacerItem *verticalSpacer_4;
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer_7;
-    QLineEdit *lineEdit;
+    QLineEdit *old_name;
     QSpacerItem *horizontalSpacer_8;
     QSpacerItem *verticalSpacer_5;
     QHBoxLayout *horizontalLayout_5;
@@ -54,25 +54,25 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
     QLabel *label;
-    QLineEdit *lineEdit_2;
+    QLineEdit *new_name;
     QSpacerItem *horizontalSpacer_4;
     QSpacerItem *verticalSpacer_6;
     QHBoxLayout *horizontalLayout_6;
     QSpacerItem *horizontalSpacer_12;
     QLabel *label_2;
-    QLineEdit *lineEdit_3;
+    QLineEdit *new_athor;
     QSpacerItem *horizontalSpacer_13;
     QSpacerItem *verticalSpacer_7;
     QHBoxLayout *horizontalLayout_7;
     QSpacerItem *horizontalSpacer_15;
     QLabel *label_3;
-    QLineEdit *lineEdit_4;
+    QLineEdit *new_pub;
     QSpacerItem *horizontalSpacer_16;
     QSpacerItem *verticalSpacer_8;
     QHBoxLayout *horizontalLayout_8;
     QSpacerItem *horizontalSpacer_18;
     QLabel *label_4;
-    QLineEdit *lineEdit_5;
+    QLineEdit *new_year;
     QSpacerItem *horizontalSpacer_19;
     QSpacerItem *verticalSpacer_9;
     QHBoxLayout *horizontalLayout_9;
@@ -84,13 +84,12 @@ public:
     QSpacerItem *horizontalSpacer_17;
     QTextBrowser *textBrowser;
     QSpacerItem *horizontalSpacer_20;
-    QSpacerItem *verticalSpacer_10;
 
     void setupUi(QWidget *edit)
     {
         if (edit->objectName().isEmpty())
             edit->setObjectName(QString::fromUtf8("edit"));
-        edit->resize(800, 800);
+        edit->resize(800, 730);
         verticalLayout = new QVBoxLayout(edit);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(-1, 5, -1, -1);
@@ -178,7 +177,7 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_3);
 
-        verticalSpacer_4 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_4 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer_4);
 
@@ -189,12 +188,12 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer_7);
 
-        lineEdit = new QLineEdit(edit);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setMinimumSize(QSize(0, 35));
-        lineEdit->setMaximumSize(QSize(16777215, 50));
+        old_name = new QLineEdit(edit);
+        old_name->setObjectName(QString::fromUtf8("old_name"));
+        old_name->setMinimumSize(QSize(0, 41));
+        old_name->setMaximumSize(QSize(16777215, 63));
 
-        horizontalLayout_4->addWidget(lineEdit);
+        horizontalLayout_4->addWidget(old_name);
 
         horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -203,7 +202,7 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_4);
 
-        verticalSpacer_5 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_5 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer_5);
 
@@ -245,11 +244,11 @@ public:
 
         horizontalLayout_2->addWidget(label);
 
-        lineEdit_2 = new QLineEdit(edit);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setMinimumSize(QSize(0, 35));
+        new_name = new QLineEdit(edit);
+        new_name->setObjectName(QString::fromUtf8("new_name"));
+        new_name->setMinimumSize(QSize(0, 35));
 
-        horizontalLayout_2->addWidget(lineEdit_2);
+        horizontalLayout_2->addWidget(new_name);
 
         horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -274,11 +273,11 @@ public:
 
         horizontalLayout_6->addWidget(label_2);
 
-        lineEdit_3 = new QLineEdit(edit);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
-        lineEdit_3->setMinimumSize(QSize(0, 35));
+        new_athor = new QLineEdit(edit);
+        new_athor->setObjectName(QString::fromUtf8("new_athor"));
+        new_athor->setMinimumSize(QSize(0, 35));
 
-        horizontalLayout_6->addWidget(lineEdit_3);
+        horizontalLayout_6->addWidget(new_athor);
 
         horizontalSpacer_13 = new QSpacerItem(219, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
@@ -303,11 +302,11 @@ public:
 
         horizontalLayout_7->addWidget(label_3);
 
-        lineEdit_4 = new QLineEdit(edit);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
-        lineEdit_4->setMinimumSize(QSize(0, 35));
+        new_pub = new QLineEdit(edit);
+        new_pub->setObjectName(QString::fromUtf8("new_pub"));
+        new_pub->setMinimumSize(QSize(0, 35));
 
-        horizontalLayout_7->addWidget(lineEdit_4);
+        horizontalLayout_7->addWidget(new_pub);
 
         horizontalSpacer_16 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -332,11 +331,11 @@ public:
 
         horizontalLayout_8->addWidget(label_4);
 
-        lineEdit_5 = new QLineEdit(edit);
-        lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
-        lineEdit_5->setMinimumSize(QSize(0, 37));
+        new_year = new QLineEdit(edit);
+        new_year->setObjectName(QString::fromUtf8("new_year"));
+        new_year->setMinimumSize(QSize(0, 37));
 
-        horizontalLayout_8->addWidget(lineEdit_5);
+        horizontalLayout_8->addWidget(new_year);
 
         horizontalSpacer_19 = new QSpacerItem(220, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
@@ -360,7 +359,7 @@ public:
         sizePolicy.setHeightForWidth(edit_2->sizePolicy().hasHeightForWidth());
         edit_2->setSizePolicy(sizePolicy);
         edit_2->setMinimumSize(QSize(100, 50));
-        edit_2->setMaximumSize(QSize(200, 200));
+        edit_2->setMaximumSize(QSize(200, 50));
 
         horizontalLayout_9->addWidget(edit_2);
 
@@ -371,7 +370,7 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_9);
 
-        verticalSpacer = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::Preferred);
+        verticalSpacer = new QSpacerItem(20, 15, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer);
 
@@ -386,7 +385,7 @@ public:
         textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
         sizePolicy.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
         textBrowser->setSizePolicy(sizePolicy);
-        textBrowser->setMaximumSize(QSize(400, 50));
+        textBrowser->setMaximumSize(QSize(400, 40));
 
         horizontalLayout_10->addWidget(textBrowser);
 
@@ -396,10 +395,6 @@ public:
 
 
         verticalLayout_2->addLayout(horizontalLayout_10);
-
-        verticalSpacer_10 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        verticalLayout_2->addItem(verticalSpacer_10);
 
 
         verticalLayout->addLayout(verticalLayout_2);

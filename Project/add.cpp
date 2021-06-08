@@ -2,13 +2,6 @@
 #include "ui_add.h"
 #define books "books.txt"
 
-add::add(QWidget *parent ) :
-    QWidget(parent),
-    ui(new Ui::add)
-{
-    ui->setupUi(this);
-}
-
 add:: add(QList<book> list,QWidget *parent):
     QWidget(parent),
     ui(new Ui::add)
@@ -40,7 +33,7 @@ void add::on_reload_clicked()
 void add::on_pushButton_clicked()
 {
     this->close();
-    menu *f=new menu ;
+    menu *f=new menu(booklist) ;
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
 }
@@ -55,6 +48,8 @@ void add::on_add_2_clicked()
     w.year_of_publication = this->ui->year_of_publication->text() ;
 
     booklist.append(w) ;
+
+    (ctfile(booklist)) ;
 
     this->ui->textBrowser_3->append("The book was added.") ;
 }

@@ -2,6 +2,7 @@ debug/add.o
 debug/book.o
 debug/borrow.o
 debug/categories.o
+debug/ctfile.o
 debug/del.o
 debug/edit.o
 debug/main.o

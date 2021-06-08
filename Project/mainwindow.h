@@ -6,6 +6,7 @@
 #include <QTextStream>
 #include <QStringList>
 #include<menu.h>
+#include <QList>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,7 +17,8 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    QList <book> booklist ;
+    MainWindow(QList <book> list , QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
