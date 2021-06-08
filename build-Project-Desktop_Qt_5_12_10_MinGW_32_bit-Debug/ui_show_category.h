@@ -44,6 +44,11 @@ public:
     QSpacerItem *horizontalSpacer_6;
     QLineEdit *lineEdit;
     QSpacerItem *horizontalSpacer_7;
+    QSpacerItem *verticalSpacer_5;
+    QHBoxLayout *horizontalLayout_5;
+    QSpacerItem *horizontalSpacer_10;
+    QPushButton *show;
+    QSpacerItem *horizontalSpacer_11;
     QSpacerItem *verticalSpacer_4;
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer_8;
@@ -55,7 +60,7 @@ public:
     {
         if (show_category->objectName().isEmpty())
             show_category->setObjectName(QString::fromUtf8("show_category"));
-        show_category->resize(800, 600);
+        show_category->resize(800, 700);
         verticalLayout = new QVBoxLayout(show_category);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout_2 = new QVBoxLayout();
@@ -109,7 +114,7 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout);
 
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_2 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer_2);
 
@@ -127,7 +132,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
         textBrowser->setSizePolicy(sizePolicy);
-        textBrowser->setMinimumSize(QSize(600, 0));
+        textBrowser->setMinimumSize(QSize(650, 0));
         textBrowser->setMaximumSize(QSize(600, 50));
 
         horizontalLayout_2->addWidget(textBrowser);
@@ -139,7 +144,7 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_2);
 
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_3 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer_3);
 
@@ -162,6 +167,32 @@ public:
 
 
         verticalLayout_2->addLayout(horizontalLayout_3);
+
+        verticalSpacer_5 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_5);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        horizontalLayout_5->setContentsMargins(-1, 0, -1, -1);
+        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_10);
+
+        show = new QPushButton(show_category);
+        show->setObjectName(QString::fromUtf8("show"));
+        sizePolicy.setHeightForWidth(show->sizePolicy().hasHeightForWidth());
+        show->setSizePolicy(sizePolicy);
+        show->setMinimumSize(QSize(100, 60));
+
+        horizontalLayout_5->addWidget(show);
+
+        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_11);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_5);
 
         verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
@@ -186,7 +217,7 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_4);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer);
 
@@ -209,7 +240,8 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.05594pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt;\">Enter the name of the category you want.</span></p></body></html>", nullptr));
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt;\">Enter the name of the category you want to see.</span></p></body></html>", nullptr));
+        show->setText(QApplication::translate("show_category", "Show", nullptr));
         textBrowser_2->setHtml(QApplication::translate("show_category", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"

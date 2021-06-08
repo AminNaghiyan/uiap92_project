@@ -3,7 +3,6 @@
 
 #include <QWidget>
 #include <menu.h>
-#include <QList>
 
 namespace Ui {
 class edit;

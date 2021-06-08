@@ -63,7 +63,7 @@ void menu::on_show_all_clicked()
 void menu::on_categories_clicked()
 {
     this->hide();
-    categories *f=new categories ;
+    categories *f=new categories(booklist) ;
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
 }
