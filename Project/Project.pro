@@ -13,6 +13,7 @@ SOURCES += \
     book.cpp \
     borrow.cpp \
     categories.cpp \
+    creat_new_category.cpp \
     ctfile.cpp \
     del.cpp \
     edit.cpp \
@@ -27,6 +28,7 @@ HEADERS += \
     book.h \
     borrow.h \
     categories.h \
+    creat_new_category.h \
     ctfile.h \
     del.h \
     edit.h \
@@ -39,6 +41,7 @@ FORMS += \
     add.ui \
     borrow.ui \
     categories.ui \
+    creat_new_category.ui \
     del.ui \
     edit.ui \
     mainwindow.ui \

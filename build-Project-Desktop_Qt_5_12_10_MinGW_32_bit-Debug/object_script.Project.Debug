@@ -2,6 +2,7 @@ debug/add.o
 debug/book.o
 debug/borrow.o
 debug/categories.o
+debug/creat_new_category.o
 debug/ctfile.o
 debug/del.o
 debug/edit.o
@@ -14,6 +15,7 @@ debug/qrc_resource.o
 debug/moc_add.o
 debug/moc_borrow.o
 debug/moc_categories.o
+debug/moc_creat_new_category.o
 debug/moc_del.o
 debug/moc_edit.o
 debug/moc_mainwindow.o

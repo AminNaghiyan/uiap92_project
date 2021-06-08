@@ -2,6 +2,7 @@ release/add.o
 release/book.o
 release/borrow.o
 release/categories.o
+release/creat_new_category.o
 release/ctfile.o
 release/del.o
 release/edit.o
@@ -14,6 +15,7 @@ release/qrc_resource.o
 release/moc_add.o
 release/moc_borrow.o
 release/moc_categories.o
+release/moc_creat_new_category.o
 release/moc_del.o
 release/moc_edit.o
 release/moc_mainwindow.o
