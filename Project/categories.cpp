@@ -6,8 +6,16 @@ categories::categories(QList<book> list, QWidget *parent) :
     ui(new Ui::categories)
 {
     this->booklist = list ;
-    QList <book> blist;
-    this->borrowlist = blist ;
+    QList <category> blist;
+    this->catlist = blist ;
+    ui->setupUi(this);
+}
+categories::categories(QList <book> list, QList<category> clist , QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::categories)
+{
+    this->booklist = list ;
+    this->catlist = clist ;
     ui->setupUi(this);
 }
 
@@ -32,7 +40,7 @@ void categories::on_back_clicked()
 void categories::on_creat_new_category_clicked()
 {
     this->close();
-    creat_new_category *f = new creat_new_category();
+    creat_new_category *f = new creat_new_category(booklist,catlist);
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
 }

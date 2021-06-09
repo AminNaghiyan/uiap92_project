@@ -3,6 +3,7 @@ debug/add_to_category.o
 debug/book.o
 debug/borrow.o
 debug/categories.o
+debug/category.o
 debug/creat_new_category.o
 debug/ctfile.o
 debug/del.o

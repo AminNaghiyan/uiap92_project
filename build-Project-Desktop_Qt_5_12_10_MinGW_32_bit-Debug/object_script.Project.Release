@@ -3,6 +3,7 @@ release/add_to_category.o
 release/book.o
 release/borrow.o
 release/categories.o
+release/category.o
 release/creat_new_category.o
 release/ctfile.o
 release/del.o

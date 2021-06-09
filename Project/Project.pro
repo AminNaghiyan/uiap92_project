@@ -14,6 +14,7 @@ SOURCES += \
     book.cpp \
     borrow.cpp \
     categories.cpp \
+    category.cpp \
     creat_new_category.cpp \
     ctfile.cpp \
     del.cpp \
@@ -32,6 +33,7 @@ HEADERS += \
     book.h \
     borrow.h \
     categories.h \
+    category.h \
     creat_new_category.h \
     ctfile.h \
     del.h \

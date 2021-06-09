@@ -7,6 +7,7 @@
 #include <creat_new_category.h>
 #include <search_category.h>
 #include <show_category.h>
+#include <category.h>
 
 namespace Ui {
 class categories;
@@ -18,8 +19,9 @@ class categories : public QWidget
 
 public:
     QList <book> booklist ;
-    QList <book> borrowlist ;
-    explicit categories (QList <book> list,QWidget *parent = nullptr);
+    QList <category> catlist ;
+    explicit categories (QList <book> list , QWidget *parent = nullptr);
+    explicit categories (QList <book> list , QList<category> clist, QWidget *parent = nullptr);
     ~categories();
 
 private slots:
