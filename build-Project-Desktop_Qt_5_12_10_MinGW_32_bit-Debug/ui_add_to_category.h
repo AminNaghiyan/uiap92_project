@@ -277,8 +277,8 @@ public:
         textBrowser_3->setObjectName(QString::fromUtf8("textBrowser_3"));
         sizePolicy1.setHeightForWidth(textBrowser_3->sizePolicy().hasHeightForWidth());
         textBrowser_3->setSizePolicy(sizePolicy1);
-        textBrowser_3->setMinimumSize(QSize(0, 40));
-        textBrowser_3->setMaximumSize(QSize(16777215, 40));
+        textBrowser_3->setMinimumSize(QSize(400, 40));
+        textBrowser_3->setMaximumSize(QSize(600, 40));
 
         horizontalLayout_7->addWidget(textBrowser_3);
 

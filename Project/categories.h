@@ -20,8 +20,9 @@ class categories : public QWidget
 public:
     QList <book> booklist ;
     QList <category> catlist ;
-    explicit categories (QList <book> list , QWidget *parent = nullptr);
-    explicit categories (QList <book> list , QList<category> clist, QWidget *parent = nullptr);
+
+    explicit categories ( QList <book> list , QWidget *parent = nullptr);
+    explicit categories( QList<category> clist , QWidget *parent = nullptr) ;
     ~categories();
 
 private slots:
