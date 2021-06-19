@@ -24,8 +24,7 @@ SOURCES += \
     menu.cpp \
     search.cpp \
     search_category.cpp \
-    show_all.cpp \
-    show_category.cpp
+    show_all.cpp
 
 HEADERS += \
     add.h \
@@ -42,8 +41,7 @@ HEADERS += \
     menu.h \
     search.h \
     search_category.h \
-    show_all.h \
-    show_category.h
+    show_all.h
 
 FORMS += \
     add.ui \
@@ -57,8 +55,7 @@ FORMS += \
     menu.ui \
     search.ui \
     search_category.ui \
-    show_all.ui \
-    show_category.ui
+    show_all.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -1,10 +1,11 @@
 #include "creat_new_category.h"
 #include "ui_creat_new_category.h"
 
-creat_new_category::creat_new_category( QList <category> clist , QWidget *parent) :
+creat_new_category::creat_new_category( QList <book> list , QList <category> clist , QWidget *parent) :
     QWidget(parent),
     ui(new Ui::creat_new_category)
 {
+    this->booklist = list ;
     this->catlist= clist ;
     ui->setupUi(this);
 }
@@ -28,7 +29,7 @@ void creat_new_category::on_reload_clicked()
 void creat_new_category::on_back_clicked()
 {
     this->close();
-    categories *f = new categories( catlist );
+    categories *f = new categories(booklist , catlist );
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
 

@@ -42,7 +42,7 @@ public:
     QSpacerItem *verticalSpacer_3;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_6;
-    QLineEdit *lineEdit;
+    QLineEdit *category_name;
     QSpacerItem *horizontalSpacer_7;
     QSpacerItem *verticalSpacer_4;
     QHBoxLayout *horizontalLayout_5;
@@ -60,7 +60,7 @@ public:
     {
         if (search_category->objectName().isEmpty())
             search_category->setObjectName(QString::fromUtf8("search_category"));
-        search_category->resize(800, 700);
+        search_category->resize(800, 800);
         search_category->setMinimumSize(QSize(60, 0));
         verticalLayout = new QVBoxLayout(search_category);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
@@ -115,7 +115,7 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout);
 
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_2 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer_2);
 
@@ -144,7 +144,7 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_2);
 
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_3 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer_3);
 
@@ -155,11 +155,11 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_6);
 
-        lineEdit = new QLineEdit(search_category);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setMinimumSize(QSize(0, 40));
+        category_name = new QLineEdit(search_category);
+        category_name->setObjectName(QString::fromUtf8("category_name"));
+        category_name->setMinimumSize(QSize(0, 40));
 
-        horizontalLayout_3->addWidget(lineEdit);
+        horizontalLayout_3->addWidget(category_name);
 
         horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -197,30 +197,34 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_5);
 
-        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer_5 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer_5);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(-1, 0, -1, -1);
-        horizontalSpacer_8 = new QSpacerItem(200, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_8 = new QSpacerItem(200, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_4->addItem(horizontalSpacer_8);
 
         textBrowser_2 = new QTextBrowser(search_category);
         textBrowser_2->setObjectName(QString::fromUtf8("textBrowser_2"));
+        sizePolicy1.setHeightForWidth(textBrowser_2->sizePolicy().hasHeightForWidth());
+        textBrowser_2->setSizePolicy(sizePolicy1);
+        textBrowser_2->setMinimumSize(QSize(450, 400));
+        textBrowser_2->setMaximumSize(QSize(450, 400));
 
         horizontalLayout_4->addWidget(textBrowser_2);
 
-        horizontalSpacer_9 = new QSpacerItem(200, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_9 = new QSpacerItem(200, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_4->addItem(horizontalSpacer_9);
 
 
         verticalLayout_2->addLayout(horizontalLayout_4);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_2->addItem(verticalSpacer);
 

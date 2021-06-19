@@ -14,8 +14,9 @@ class creat_new_category : public QWidget
     Q_OBJECT
 
 public:
+    QList <book> booklist ;
     QList <category> catlist ;
-    explicit creat_new_category( QList <category> clist, QWidget *parent = nullptr);
+    explicit creat_new_category( QList <book> list , QList <category> clist, QWidget *parent = nullptr);
     ~creat_new_category();
 
 private slots:

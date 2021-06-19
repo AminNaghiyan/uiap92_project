@@ -47,11 +47,6 @@ public:
     QSpacerItem *horizontalSpacer_4;
     QPushButton *search_category;
     QSpacerItem *horizontalSpacer_5;
-    QSpacerItem *verticalSpacer_4;
-    QHBoxLayout *horizontalLayout_3;
-    QSpacerItem *horizontalSpacer_6;
-    QPushButton *show_category;
-    QSpacerItem *horizontalSpacer_7;
     QSpacerItem *verticalSpacer;
 
     void setupUi(QWidget *categories)
@@ -162,7 +157,8 @@ public:
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(add_to_category->sizePolicy().hasHeightForWidth());
         add_to_category->setSizePolicy(sizePolicy2);
-        add_to_category->setMinimumSize(QSize(0, 80));
+        add_to_category->setMinimumSize(QSize(8, 80));
+        add_to_category->setMaximumSize(QSize(200, 107));
 
         horizontalLayout_5->addWidget(add_to_category);
 
@@ -204,33 +200,6 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout_4);
 
-        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_3->addItem(verticalSpacer_4);
-
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        horizontalLayout_3->setContentsMargins(-1, 0, -1, -1);
-        horizontalSpacer_6 = new QSpacerItem(270, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        horizontalLayout_3->addItem(horizontalSpacer_6);
-
-        show_category = new QPushButton(categories);
-        show_category->setObjectName(QString::fromUtf8("show_category"));
-        sizePolicy.setHeightForWidth(show_category->sizePolicy().hasHeightForWidth());
-        show_category->setSizePolicy(sizePolicy);
-        show_category->setMinimumSize(QSize(0, 80));
-        show_category->setMaximumSize(QSize(200, 16777215));
-
-        horizontalLayout_3->addWidget(show_category);
-
-        horizontalSpacer_7 = new QSpacerItem(270, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        horizontalLayout_3->addItem(horizontalSpacer_7);
-
-
-        verticalLayout_3->addLayout(horizontalLayout_3);
-
 
         verticalLayout_2->addLayout(verticalLayout_3);
 
@@ -255,7 +224,6 @@ public:
         creat_new_category->setText(QApplication::translate("categories", "Creat new category", nullptr));
         add_to_category->setText(QApplication::translate("categories", "Add a book to a category", nullptr));
         search_category->setText(QApplication::translate("categories", "Search for a category", nullptr));
-        show_category->setText(QApplication::translate("categories", "Show a category", nullptr));
     } // retranslateUi
 
 };

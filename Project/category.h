@@ -3,12 +3,13 @@
 
 #include<QString>
 #include <QList>
+#include <book.h>
 
 class category
 {
 public:
     QString category_name ;
-    QList <QString> book_name ;
+    QList <book> book ;
     category();
 };
 

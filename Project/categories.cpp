@@ -1,6 +1,7 @@
 #include "categories.h"
 #include "ui_categories.h"
 
+
 categories::categories( QList <book> list , QWidget *parent) :
     QWidget(parent),
     ui(new Ui::categories)
@@ -11,10 +12,11 @@ categories::categories( QList <book> list , QWidget *parent) :
     ui->setupUi(this);
 }
 
-categories::categories( QList<category> clist , QWidget *parent) :
+categories::categories(QList <book> list , QList<category> clist , QWidget *parent) :
     QWidget(parent),
     ui(new Ui::categories)
 {
+    this->booklist = list ;
     this->catlist = clist ;
     ui->setupUi(this);
 }
@@ -40,15 +42,15 @@ void categories::on_back_clicked()
 
 void categories::on_creat_new_category_clicked()
 {
-    this->close();
-    creat_new_category *f = new creat_new_category(catlist);
+    this->hide();
+    creat_new_category *f = new creat_new_category(booklist , catlist);
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
 }
 
 void categories::on_add_to_category_clicked()
 {
-    this->close();
+    this->hide();
     add_to_category *f = new add_to_category(booklist , catlist);
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
@@ -56,16 +58,8 @@ void categories::on_add_to_category_clicked()
 
 void categories::on_search_category_clicked()
 {
-    this->close();
-    search_category *f = new search_category();
-    f->setAttribute(Qt::WA_DeleteOnClose);
-    f->show();
-}
-
-void categories::on_show_category_clicked()
-{
-    this->close();
-    show_category *f = new show_category();
+    this->hide();
+    search_category *f = new search_category(booklist , catlist );
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
 }

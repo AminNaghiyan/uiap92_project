@@ -92,7 +92,6 @@ void categories::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 2: _t->on_creat_new_category_clicked(); break;
         case 3: _t->on_add_to_category_clicked(); break;
         case 4: _t->on_search_category_clicked(); break;
-        case 5: _t->on_show_category_clicked(); break;
         default: ;
         }
     }

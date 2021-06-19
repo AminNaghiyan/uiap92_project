@@ -29,18 +29,47 @@ void add_to_category::on_reload_clicked()
 
 void add_to_category::on_back_clicked()
 {
-    this->close();
-    categories *f = new categories( catlist );
+    this->hide();
+    categories *f = new categories( booklist , catlist );
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
 }
 
 void add_to_category::on_add_clicked()
 {
+    this->ui->textBrowser_3->clear() ;
+
+    bool mmd=false , mmc=false ;
+
     for(int i=0 ; i<catlist.size() ; i++ ){
-        if(this->ui->category_name->text() == catlist[i].category_name)
-            catlist[i].book_name.append(this->ui->book_name->text()) ;
+        if(this->ui->category_name->text() == catlist[i].category_name){
+
+            mmd=true ;
+
+            for(int j=0 ; j<booklist.size() ; j++ ){
+
+                if(booklist[j].name == this->ui->book_name->text()){
+
+                    mmc=true ;
+
+                    book w;
+                    w.name=booklist[j].name;
+                    w.athor=booklist[j].athor;
+                    w.publisher=booklist[j].publisher;
+                    w.year_of_publication=booklist[j].year_of_publication;
+
+                    catlist[i].book.append(w) ; ;
+                }
+            }
+        }
     }
 
-    this->ui->textBrowser_3->append("The book was added to category.") ;
+    if(mmd==false)
+        this->ui->textBrowser_3->append("The category was not found.") ;
+
+    if(mmd==true && mmc==false)
+        this->ui->textBrowser_3->append("The book was not found.") ;
+
+    if(mmd==true && mmc==true)
+        this->ui->textBrowser_3->append("The book was added to category.") ;
 }

@@ -6,7 +6,6 @@
 #include <add_to_category.h>
 #include <creat_new_category.h>
 #include <search_category.h>
-#include <show_category.h>
 #include <category.h>
 
 namespace Ui {
@@ -22,7 +21,7 @@ public:
     QList <category> catlist ;
 
     explicit categories ( QList <book> list , QWidget *parent = nullptr);
-    explicit categories( QList<category> clist , QWidget *parent = nullptr) ;
+    explicit categories(QList <book> list , QList<category> clist , QWidget *parent = nullptr) ;
     ~categories();
 
 private slots:
