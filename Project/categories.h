@@ -35,8 +35,6 @@ private slots:
 
     void on_search_category_clicked();
 
-    void on_show_category_clicked();
-
 private:
     Ui::categories *ui;
 };

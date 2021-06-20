@@ -47,7 +47,7 @@ void menu::on_edit_clicked()
 void menu::on_search_clicked()
 {
     this->hide();
-    search *f=new search ;
+    search *f=new search(booklist) ;
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
 }
