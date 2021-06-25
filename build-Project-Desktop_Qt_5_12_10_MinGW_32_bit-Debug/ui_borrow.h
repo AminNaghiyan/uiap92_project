@@ -51,14 +51,14 @@ public:
     QSpacerItem *horizontalSpacer_7;
     QLabel *label;
     QSpacerItem *horizontalSpacer_9;
-    QLineEdit *lineEdit;
+    QLineEdit *bookname;
     QSpacerItem *horizontalSpacer_8;
     QSpacerItem *verticalSpacer_6;
     QHBoxLayout *horizontalLayout_5;
     QSpacerItem *horizontalSpacer_11;
     QLabel *label_2;
     QSpacerItem *horizontalSpacer_13;
-    QLineEdit *lineEdit_2;
+    QLineEdit *username;
     QSpacerItem *horizontalSpacer_12;
     QSpacerItem *verticalSpacer_5;
     QHBoxLayout *horizontalLayout_7;
@@ -211,10 +211,10 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer_9);
 
-        lineEdit = new QLineEdit(borrow);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        bookname = new QLineEdit(borrow);
+        bookname->setObjectName(QString::fromUtf8("bookname"));
 
-        horizontalLayout_4->addWidget(lineEdit);
+        horizontalLayout_4->addWidget(bookname);
 
         horizontalSpacer_8 = new QSpacerItem(208, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
@@ -243,10 +243,10 @@ public:
 
         horizontalLayout_5->addItem(horizontalSpacer_13);
 
-        lineEdit_2 = new QLineEdit(borrow);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        username = new QLineEdit(borrow);
+        username->setObjectName(QString::fromUtf8("username"));
 
-        horizontalLayout_5->addWidget(lineEdit_2);
+        horizontalLayout_5->addWidget(username);
 
         horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 

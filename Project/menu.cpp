@@ -15,6 +15,8 @@ menu::~menu()
     delete ui;
 }
 
+QList <borrow_class> borrowlist ;
+
 void menu::on_pushButton_clicked()
 {
     this->close() ;
@@ -71,7 +73,7 @@ void menu::on_categories_clicked()
 void menu::on_borrow_clicked()
 {
     this->hide();
-    borrow *f=new borrow ;
+    borrow *f=new borrow ( booklist , borrowlist ) ;
     f->setAttribute(Qt::WA_DeleteOnClose);
     f->show();
 }

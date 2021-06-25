@@ -2,6 +2,7 @@ release/add.o
 release/add_to_category.o
 release/book.o
 release/borrow.o
+release/borrow_class.o
 release/categories.o
 release/category.o
 release/creat_new_category.o

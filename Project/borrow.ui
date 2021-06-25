@@ -368,7 +368,7 @@ p, li { white-space: pre-wrap; }
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit"/>
+          <widget class="QLineEdit" name="bookname"/>
          </item>
          <item>
           <spacer name="horizontalSpacer_8">
@@ -446,7 +446,7 @@ p, li { white-space: pre-wrap; }
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_2"/>
+          <widget class="QLineEdit" name="username"/>
          </item>
          <item>
           <spacer name="horizontalSpacer_12">

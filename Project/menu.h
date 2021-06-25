@@ -12,6 +12,7 @@
 #include <show_all.h>
 #include<QList>
 #include <ctfile.h>
+#include <borrow_class.h>
 
 namespace Ui {
 class menu;

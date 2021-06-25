@@ -2,6 +2,7 @@ debug/add.o
 debug/add_to_category.o
 debug/book.o
 debug/borrow.o
+debug/borrow_class.o
 debug/categories.o
 debug/category.o
 debug/creat_new_category.o

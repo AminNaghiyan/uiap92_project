@@ -36,7 +36,6 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-QList <book> booklist ;
 
 void MainWindow::on_close_clicked()
 {

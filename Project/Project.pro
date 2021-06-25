@@ -13,6 +13,7 @@ SOURCES += \
     add_to_category.cpp \
     book.cpp \
     borrow.cpp \
+    borrow_class.cpp \
     categories.cpp \
     category.cpp \
     creat_new_category.cpp \
@@ -31,6 +32,7 @@ HEADERS += \
     add_to_category.h \
     book.h \
     borrow.h \
+    borrow_class.h \
     categories.h \
     category.h \
     creat_new_category.h \
