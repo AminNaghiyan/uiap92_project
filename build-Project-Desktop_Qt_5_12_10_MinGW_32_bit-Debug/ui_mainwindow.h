@@ -29,6 +29,7 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
+    QWidget *top;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *reload;
@@ -72,24 +73,116 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(800, 592);
+        MainWindow->setStyleSheet(QString::fromUtf8("#centralwidget\n"
+"{\n"
+"background-color : rgb(14, 22, 33)\n"
+"}\n"
+"#top\n"
+"{\n"
+"background-color : rgb(107, 107, 107)\n"
+"}\n"
+"#reload::hover\n"
+"{\n"
+"	background-color: rgb(206, 206, 206);\n"
+"}\n"
+"#reload\n"
+"{\n"
+"background-color : rgb(140, 140, 140) ;\n"
+"border-color: rgb(0, 0, 0);\n"
+"}\n"
+"#close\n"
+"{\n"
+"background-color : rgb(140, 140, 140) ;\n"
+"}\n"
+"#close::hover\n"
+"{\n"
+"background-color : red \n"
+"\n"
+"}\n"
+"#textBrowser_2\n"
+"{\n"
+"	\n"
+"	font: 8pt \"MS UI Gothic\";\n"
+"    background-color : rgb( 0, 0 , 0 );\n"
+"    color : rgb(160, 105, 255) ;\n"
+"	border-color: rgb(0, 0, 0,0);\n"
+"}\n"
+"#verticalWidget\n"
+"{\n"
+" background-color : #daa520\n"
+"}\n"
+"#username\n"
+"{\n"
+"background-color : rgb(85, 0, 127)\n"
+"}\n"
+"#username\n"
+"{\n"
+"color : rgb(85, 255, 255) ;\n"
+"background-color : rgb(66, 0, 99)\n"
+"}\n"
+"#password\n"
+"{\n"
+"color : rgb(85, 255, 255) ;\n"
+"background-color : rgb(66, 0, 99)\n"
+"}\n"
+"#Login\n"
+"{\n"
+"	color: rgb(255, 170, 255);\n"
+"	background-color: rgb(0, 0, 0);"
+                        "\n"
+"}\n"
+"#Login::hover\n"
+"{\n"
+"background-color : rgb(66, 0, 99)\n"
+"}\n"
+"\n"
+"#sign_up\n"
+"{\n"
+"	color: rgb(255, 170, 255);\n"
+"background-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"#sign_up::hover\n"
+"{\n"
+"background-color : rgb(66, 0, 99)\n"
+"}\n"
+"\n"
+"#textBrowser\n"
+"{\n"
+"	\n"
+"	font: 12pt \"MS Shell Dlg 2\";\n"
+"	background-color: rgb(0, 0, 0);\n"
+"	color: rgb(0, 85, 127);\n"
+"	border-color: rgb(14, 22, 33,0)\n"
+"}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        centralwidget->setStyleSheet(QString::fromUtf8(""));
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(-1, 5, -1, -1);
-        horizontalLayout = new QHBoxLayout();
+        verticalLayout->setContentsMargins(0, 0, 0, -1);
+        top = new QWidget(centralwidget);
+        top->setObjectName(QString::fromUtf8("top"));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(top->sizePolicy().hasHeightForWidth());
+        top->setSizePolicy(sizePolicy);
+        top->setMinimumSize(QSize(0, 10));
+        top->setMaximumSize(QSize(16777215, 200));
+        horizontalLayout = new QHBoxLayout(top);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        reload = new QPushButton(centralwidget);
+        reload = new QPushButton(top);
         reload->setObjectName(QString::fromUtf8("reload"));
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy.setHorizontalStretch(55);
-        sizePolicy.setVerticalStretch(30);
-        sizePolicy.setHeightForWidth(reload->sizePolicy().hasHeightForWidth());
-        reload->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(55);
+        sizePolicy1.setVerticalStretch(30);
+        sizePolicy1.setHeightForWidth(reload->sizePolicy().hasHeightForWidth());
+        reload->setSizePolicy(sizePolicy1);
         reload->setMinimumSize(QSize(60, 40));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/icons/reload.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -102,13 +195,13 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_11);
 
-        close = new QPushButton(centralwidget);
+        close = new QPushButton(top);
         close->setObjectName(QString::fromUtf8("close"));
-        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy1.setHorizontalStretch(70);
-        sizePolicy1.setVerticalStretch(30);
-        sizePolicy1.setHeightForWidth(close->sizePolicy().hasHeightForWidth());
-        close->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(70);
+        sizePolicy2.setVerticalStretch(30);
+        sizePolicy2.setHeightForWidth(close->sizePolicy().hasHeightForWidth());
+        close->setSizePolicy(sizePolicy2);
         close->setMinimumSize(QSize(60, 40));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/icons/close.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -118,7 +211,7 @@ public:
         horizontalLayout->addWidget(close);
 
 
-        verticalLayout->addLayout(horizontalLayout);
+        verticalLayout->addWidget(top);
 
         verticalSpacer_3 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
@@ -133,11 +226,11 @@ public:
 
         textBrowser_2 = new QTextBrowser(centralwidget);
         textBrowser_2->setObjectName(QString::fromUtf8("textBrowser_2"));
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(textBrowser_2->sizePolicy().hasHeightForWidth());
-        textBrowser_2->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(textBrowser_2->sizePolicy().hasHeightForWidth());
+        textBrowser_2->setSizePolicy(sizePolicy3);
         textBrowser_2->setMaximumSize(QSize(16777214, 60));
 
         horizontalLayout_9->addWidget(textBrowser_2);
@@ -162,8 +255,8 @@ public:
 
         verticalWidget = new QWidget(centralwidget);
         verticalWidget->setObjectName(QString::fromUtf8("verticalWidget"));
-        sizePolicy2.setHeightForWidth(verticalWidget->sizePolicy().hasHeightForWidth());
-        verticalWidget->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(verticalWidget->sizePolicy().hasHeightForWidth());
+        verticalWidget->setSizePolicy(sizePolicy3);
         verticalWidget->setMinimumSize(QSize(200, 200));
         verticalLayout_7 = new QVBoxLayout(verticalWidget);
         verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
@@ -174,13 +267,14 @@ public:
 
         horizontalWidget_4 = new QWidget(verticalWidget);
         horizontalWidget_4->setObjectName(QString::fromUtf8("horizontalWidget_4"));
-        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy3.setHorizontalStretch(100);
-        sizePolicy3.setVerticalStretch(50);
-        sizePolicy3.setHeightForWidth(horizontalWidget_4->sizePolicy().hasHeightForWidth());
-        horizontalWidget_4->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy4.setHorizontalStretch(100);
+        sizePolicy4.setVerticalStretch(50);
+        sizePolicy4.setHeightForWidth(horizontalWidget_4->sizePolicy().hasHeightForWidth());
+        horizontalWidget_4->setSizePolicy(sizePolicy4);
         horizontalWidget_4->setMinimumSize(QSize(300, 50));
         horizontalWidget_4->setMaximumSize(QSize(16777215, 16777215));
+        horizontalWidget_4->setStyleSheet(QString::fromUtf8(""));
         horizontalLayout_6 = new QHBoxLayout(horizontalWidget_4);
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
         horizontalLayout_6->setContentsMargins(-1, 0, -1, -1);
@@ -195,6 +289,7 @@ public:
 
         username = new QLineEdit(horizontalWidget_4);
         username->setObjectName(QString::fromUtf8("username"));
+        username->setMinimumSize(QSize(0, 35));
 
         horizontalLayout_6->addWidget(username);
 
@@ -217,6 +312,7 @@ public:
 
         password = new QLineEdit(horizontalWidget_5);
         password->setObjectName(QString::fromUtf8("password"));
+        password->setMinimumSize(QSize(0, 35));
         password->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_7->addWidget(password);
@@ -267,11 +363,11 @@ public:
 
         textBrowser = new QTextBrowser(centralwidget);
         textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
-        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(1);
-        sizePolicy4.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
-        textBrowser->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy5(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(1);
+        sizePolicy5.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
+        textBrowser->setSizePolicy(sizePolicy5);
         textBrowser->setMinimumSize(QSize(282, 1));
         textBrowser->setMaximumSize(QSize(1981, 50));
 
@@ -303,8 +399,8 @@ public:
         textBrowser_2->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.05594pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" dir='rtl' style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt;\">Log / Sign in to library</span></p></body></html>", nullptr));
+"</style></head><body style=\" font-family:'MS UI Gothic'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" dir='rtl' style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:14pt;\">Log / Sign in to library</span></p></body></html>", nullptr));
         label->setText(QApplication::translate("MainWindow", "Username :", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "Password :", nullptr));
         sign_up->setText(QApplication::translate("MainWindow", "Sign up", nullptr));
@@ -312,7 +408,7 @@ public:
         textBrowser->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.05594pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt;\"><br /></p></body></html>", nullptr));
     } // retranslateUi
 

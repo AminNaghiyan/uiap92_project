@@ -24,6 +24,7 @@ class Ui_menu
 {
 public:
     QVBoxLayout *verticalLayout_3;
+    QWidget *top;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer;
     QPushButton *pushButton;
@@ -64,17 +65,37 @@ public:
         menu->setSizePolicy(sizePolicy);
         menu->setMaximumSize(QSize(16777204, 16777215));
         menu->setSizeIncrement(QSize(100, 100));
+        menu->setStyleSheet(QString::fromUtf8("#menu\n"
+"{\n"
+"background-color : rgb(14, 22, 33)\n"
+"}\n"
+"#top\n"
+"{\n"
+"background-color : rgb(107, 107, 107)\n"
+"}\n"
+"\n"
+"#pushButton\n"
+"{\n"
+"background-color : rgb(140, 140, 140) ;\n"
+"}\n"
+"#pushButton::hover\n"
+"{\n"
+"background-color : red \n"
+"\n"
+"}"));
         verticalLayout_3 = new QVBoxLayout(menu);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-        verticalLayout_3->setContentsMargins(-1, 13, -1, 13);
-        horizontalLayout_2 = new QHBoxLayout();
+        verticalLayout_3->setContentsMargins(0, 0, 0, 13);
+        top = new QWidget(menu);
+        top->setObjectName(QString::fromUtf8("top"));
+        horizontalLayout_2 = new QHBoxLayout(top);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalLayout_2->setContentsMargins(-1, 0, -1, -1);
+        horizontalLayout_2->setContentsMargins(-1, 1, -1, -1);
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_2->addItem(horizontalSpacer);
 
-        pushButton = new QPushButton(menu);
+        pushButton = new QPushButton(top);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy);
@@ -87,7 +108,7 @@ public:
         horizontalLayout_2->addWidget(pushButton);
 
 
-        verticalLayout_3->addLayout(horizontalLayout_2);
+        verticalLayout_3->addWidget(top);
 
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
