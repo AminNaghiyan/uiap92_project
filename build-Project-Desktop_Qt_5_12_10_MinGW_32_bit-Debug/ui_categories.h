@@ -24,7 +24,9 @@ class Ui_categories
 {
 public:
     QVBoxLayout *verticalLayout;
+    QWidget *center;
     QVBoxLayout *verticalLayout_2;
+    QWidget *top;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *back;
@@ -54,19 +56,87 @@ public:
         if (categories->objectName().isEmpty())
             categories->setObjectName(QString::fromUtf8("categories"));
         categories->resize(800, 600);
+        categories->setStyleSheet(QString::fromUtf8("#categories\n"
+"{\n"
+"background-color : rgb(14, 22, 33)\n"
+"}\n"
+"\n"
+"#top\n"
+"{\n"
+"background-color : rgb(107, 107, 107)\n"
+"}\n"
+"\n"
+"#back::hover\n"
+"{\n"
+"	background-color: rgb(206, 206, 206);\n"
+"}\n"
+"\n"
+"#back\n"
+"{\n"
+"background-color : rgb(140, 140, 140) ;\n"
+"border-color: rgb(0, 0, 0);\n"
+"}\n"
+"#close\n"
+"{\n"
+"background-color : rgb(140, 140, 140) ;\n"
+"}\n"
+"\n"
+"#close::hover\n"
+"{\n"
+"background-color : red \n"
+"}\n"
+"\n"
+"\n"
+"#creat_new_category\n"
+"{\n"
+"background-color : rgb(218, 165, 32)\n"
+"}\n"
+"\n"
+"#add_to_category\n"
+"{\n"
+"background-color : rgb(218, 165, 32)\n"
+"}\n"
+"\n"
+"#search_category\n"
+"{\n"
+"background-color : rgb(218, 165, 32)\n"
+"}\n"
+"\n"
+"\n"
+"#creat_new_category::hover\n"
+"{\n"
+"background-color : #008080\n"
+"}\n"
+"\n"
+"#add_to_category::hover\n"
+"{\n"
+"background-color : #008080\n"
+"}\n"
+"\n"
+"#search_category::hover\n"
+"{\n"
+"background-color : #008080\n"
+"}\n"
+"\n"
+""));
         verticalLayout = new QVBoxLayout(categories);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout->setContentsMargins(0, 0, 0, -1);
+        center = new QWidget(categories);
+        center->setObjectName(QString::fromUtf8("center"));
+        verticalLayout_2 = new QVBoxLayout(center);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(-1, -1, -1, 0);
-        horizontalLayout = new QHBoxLayout();
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        top = new QWidget(center);
+        top->setObjectName(QString::fromUtf8("top"));
+        horizontalLayout = new QHBoxLayout(top);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(-1, -1, -1, 0);
+        horizontalLayout->setContentsMargins(-1, -1, -1, 1);
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        back = new QPushButton(categories);
+        back = new QPushButton(top);
         back->setObjectName(QString::fromUtf8("back"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
@@ -85,7 +155,7 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_8);
 
-        close = new QPushButton(categories);
+        close = new QPushButton(top);
         close->setObjectName(QString::fromUtf8("close"));
         sizePolicy.setHeightForWidth(close->sizePolicy().hasHeightForWidth());
         close->setSizePolicy(sizePolicy);
@@ -98,7 +168,7 @@ public:
         horizontalLayout->addWidget(close);
 
 
-        verticalLayout_2->addLayout(horizontalLayout);
+        verticalLayout_2->addWidget(top);
 
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Minimum);
 
@@ -119,7 +189,7 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer_2);
 
-        creat_new_category = new QPushButton(categories);
+        creat_new_category = new QPushButton(center);
         creat_new_category->setObjectName(QString::fromUtf8("creat_new_category"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(200);
@@ -150,7 +220,7 @@ public:
 
         horizontalLayout_5->addItem(horizontalSpacer_9);
 
-        add_to_category = new QPushButton(categories);
+        add_to_category = new QPushButton(center);
         add_to_category->setObjectName(QString::fromUtf8("add_to_category"));
         QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
@@ -180,7 +250,7 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer_4);
 
-        search_category = new QPushButton(categories);
+        search_category = new QPushButton(center);
         search_category->setObjectName(QString::fromUtf8("search_category"));
         QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy3.setHorizontalStretch(103);
@@ -208,7 +278,7 @@ public:
         verticalLayout_2->addItem(verticalSpacer);
 
 
-        verticalLayout->addLayout(verticalLayout_2);
+        verticalLayout->addWidget(center);
 
 
         retranslateUi(categories);
