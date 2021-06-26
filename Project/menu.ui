@@ -48,8 +48,83 @@ background-color : rgb(140, 140, 140) ;
 #pushButton::hover
 {
 background-color : red 
+}
 
-}</string>
+#search
+{
+ background-color : rgb(218, 165, 32)
+}
+
+#show_all
+{
+background-color : rgb(218, 165, 32)
+}
+
+#add
+{
+background-color : rgb(218, 165, 32)
+}
+
+#delete_2
+{
+background-color : rgb(218, 165, 32)
+}
+
+#edit
+{
+background-color : rgb(218, 165, 32)
+}
+
+#categories
+{
+background-color : rgb(218, 165, 32)
+}
+
+#borrow
+{
+background-color : rgb(218, 165, 32)
+}
+
+
+
+
+
+
+#search::hover
+{
+background-color : #008080
+}
+
+#show_all::hover
+{
+background-color : #008080
+}
+
+#add::hover
+{
+background-color : #008080
+}
+
+#delete_2::hover
+{
+background-color : #008080
+}
+
+#edit::hover
+{
+background-color : #008080
+}
+
+#categories::hover
+{
+background-color : #008080
+}
+
+#borrow::hover
+{
+background-color : #008080
+}
+</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <property name="leftMargin">
