@@ -47,17 +47,24 @@ void del::on_delete_2_clicked()
 {
     book w;
 
+    bool mmd=false ;
     w.name = this->ui->name->text() ;
     w.athor = this->ui->athor->text() ;
     w.publisher = this->ui->publisher->text();
     w.year_of_publication = this->ui->year_of_publication->text() ;
 
     for(int i=0 ; i<booklist.size() ; i++ ){
-        if(booklist[i]==w)
-              booklist.removeAt(i) ;
+        if(booklist[i]==w){
+            mmd=true ;
+            booklist.removeAt(i) ;
+        }
     }
 
     (ctfile(booklist)) ;
 
-    this->ui->textBrowser_3->append("The book was deleted.") ;
+    if(mmd==true)
+        this->ui->textBrowser_3->append("The book was deleted.") ;
+
+    if(mmd==false)
+        this->ui->textBrowser_3->append("The book was not found.") ;
 }

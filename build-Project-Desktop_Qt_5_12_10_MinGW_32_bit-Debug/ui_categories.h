@@ -147,7 +147,7 @@ public:
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/icons/back.png"), QSize(), QIcon::Normal, QIcon::Off);
         back->setIcon(icon);
-        back->setIconSize(QSize(60, 40));
+        back->setIconSize(QSize(23, 23));
 
         horizontalLayout->addWidget(back);
 
@@ -163,7 +163,7 @@ public:
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/icons/close.png"), QSize(), QIcon::Normal, QIcon::Off);
         close->setIcon(icon1);
-        close->setIconSize(QSize(60, 40));
+        close->setIconSize(QSize(23, 23));
 
         horizontalLayout->addWidget(close);
 

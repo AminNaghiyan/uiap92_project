@@ -583,7 +583,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="minimumSize">
          <size>
-          <width>282</width>
+          <width>411</width>
           <height>1</height>
          </size>
         </property>
