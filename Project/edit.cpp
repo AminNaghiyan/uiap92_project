@@ -39,8 +39,11 @@ void edit::on_close_2_clicked()
 
 void edit::on_edit_2_clicked()
 {
+    bool mmd=false ;
     for(int i=0 ; i<booklist.size() ; i++ ){
         if(booklist[i].name==this->ui->old_name->text()){
+
+            mmd=true ;
 
             booklist[i].name=this->ui->new_name->text() ;
             booklist[i].athor=this->ui->new_athor->text() ;
@@ -52,5 +55,9 @@ void edit::on_edit_2_clicked()
     }
     (ctfile(booklist));
 
-    this->ui->textBrowser->append("The book was edited.") ;
+    if(mmd==true)
+        this->ui->textBrowser->append("The book was edited.") ;
+
+    else
+        this->ui->textBrowser->append("The book was not found.") ;
 }

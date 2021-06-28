@@ -59,6 +59,7 @@ border-color: rgb(0, 0, 0);
 {
 	background-color: rgb(233, 150, 122);
 }
+
 #textBrowser_2
 {
 	color: rgb(255, 255, 255);
@@ -102,6 +103,7 @@ background-color: rgb(39, 104, 153) ;
 {
 background-color : #008080
 }
+
 #textBrowser_3
 {
 	background-color: rgb(0, 0, 0);

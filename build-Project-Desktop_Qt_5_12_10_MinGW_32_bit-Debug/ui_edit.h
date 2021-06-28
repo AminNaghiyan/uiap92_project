@@ -28,6 +28,7 @@ class Ui_edit
 public:
     QVBoxLayout *verticalLayout;
     QVBoxLayout *verticalLayout_2;
+    QWidget *top;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *close_2;
@@ -51,29 +52,36 @@ public:
     QTextBrowser *textBrowser_3;
     QSpacerItem *horizontalSpacer_10;
     QSpacerItem *verticalSpacer_2;
-    QHBoxLayout *horizontalLayout_2;
+    QHBoxLayout *horizontalLayout_11;
+    QSpacerItem *horizontalSpacer_22;
+    QWidget *specification;
+    QVBoxLayout *verticalLayout_4;
+    QSpacerItem *verticalSpacer_7;
+    QHBoxLayout *horizontalLayout_12;
     QSpacerItem *horizontalSpacer_3;
     QLabel *label;
     QLineEdit *new_name;
     QSpacerItem *horizontalSpacer_4;
-    QSpacerItem *verticalSpacer_6;
-    QHBoxLayout *horizontalLayout_6;
+    QSpacerItem *verticalSpacer_8;
+    QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_12;
     QLabel *label_2;
     QLineEdit *new_athor;
     QSpacerItem *horizontalSpacer_13;
-    QSpacerItem *verticalSpacer_7;
-    QHBoxLayout *horizontalLayout_7;
+    QSpacerItem *verticalSpacer_10;
+    QHBoxLayout *horizontalLayout_6;
     QSpacerItem *horizontalSpacer_15;
     QLabel *label_3;
     QLineEdit *new_pub;
     QSpacerItem *horizontalSpacer_16;
-    QSpacerItem *verticalSpacer_8;
-    QHBoxLayout *horizontalLayout_8;
-    QSpacerItem *horizontalSpacer_18;
+    QSpacerItem *verticalSpacer_11;
+    QHBoxLayout *horizontalLayout_7;
+    QSpacerItem *horizontalSpacer_24;
     QLabel *label_4;
     QLineEdit *new_year;
-    QSpacerItem *horizontalSpacer_19;
+    QSpacerItem *horizontalSpacer_18;
+    QSpacerItem *verticalSpacer_6;
+    QSpacerItem *horizontalSpacer_23;
     QSpacerItem *verticalSpacer_9;
     QHBoxLayout *horizontalLayout_9;
     QSpacerItem *horizontalSpacer_11;
@@ -89,21 +97,126 @@ public:
     {
         if (edit->objectName().isEmpty())
             edit->setObjectName(QString::fromUtf8("edit"));
-        edit->resize(800, 730);
+        edit->resize(800, 750);
+        edit->setStyleSheet(QString::fromUtf8("#edit\n"
+"{\n"
+"background-color : rgb(14, 22, 33)\n"
+"}\n"
+"\n"
+"#top\n"
+"{\n"
+"background-color : rgb(107, 107, 107)\n"
+"}\n"
+"\n"
+"#close_2::hover\n"
+"{\n"
+"	background-color: rgb(206, 206, 206);\n"
+"}\n"
+"\n"
+"#close_2\n"
+"{\n"
+"background-color : rgb(140, 140, 140) ;\n"
+"border-color: rgb(0, 0, 0);\n"
+"}\n"
+"#close\n"
+"{\n"
+"background-color : rgb(140, 140, 140) ;\n"
+"}\n"
+"\n"
+"#close::hover\n"
+"{\n"
+"background-color : red \n"
+"}\n"
+"\n"
+"#pushButton::hover\n"
+"{\n"
+"	background-color: rgb(206, 206, 206);\n"
+"}\n"
+"\n"
+"#pushButton\n"
+"{\n"
+"background-color : rgb(140, 140, 140) ;\n"
+"border-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"#specification\n"
+"{\n"
+"	background-color: rgb(218, 165, 32);\n"
+"}\n"
+"#new_name\n"
+"{\n"
+"	color: rgb(79, 59, 33);\n"
+"background-color : rgb(176, 196, 222)\n"
+"}\n"
+"\n"
+"#new_athor\n"
+"{\n"
+"background-color : rgb(176, 196, 222) ;\n"
+"color: rgb(79, 59, 33);\n"
+"}\n"
+"\n"
+"#new_pub\n"
+"{\n"
+"color: rgb(79, 59, 33);\n"
+"background-color : rgb(176, 196, 222) ;\n"
+"}\n"
+"\n"
+"#n"
+                        "ew_year\n"
+"{\n"
+"color: rgb(79, 59, 33);\n"
+"background-color : rgb(176, 196, 222) ;\n"
+"}\n"
+"#old_name\n"
+"{\n"
+"color: rgb(79, 59, 33);\n"
+"background-color : rgb(176, 196, 222) ;\n"
+"}\n"
+"\n"
+"#textBrowser_2\n"
+"{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(39, 104, 153);\n"
+"}\n"
+"\n"
+"#textBrowser_3\n"
+"{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(39, 104, 153);\n"
+"}\n"
+"#edit_2\n"
+"{\n"
+"    color: rgb(255, 255, 255);\n"
+"	background-color: rgb(39, 104, 153);\n"
+"}\n"
+"\n"
+"#edit_2::hover\n"
+"{\n"
+"    background-color : #008080\n"
+"}\n"
+"\n"
+"#textBrowser\n"
+"{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"	color: rgb(178, 34, 34);\n"
+"	font: 10pt \"MS Shell Dlg 2\";\n"
+"}"));
         verticalLayout = new QVBoxLayout(edit);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(-1, 5, -1, -1);
+        verticalLayout->setContentsMargins(0, 0, 0, -1);
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(-1, 0, -1, 10);
-        horizontalLayout = new QHBoxLayout();
+        top = new QWidget(edit);
+        top->setObjectName(QString::fromUtf8("top"));
+        horizontalLayout = new QHBoxLayout(top);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(-1, 0, -1, -1);
+        horizontalLayout->setContentsMargins(-1, 1, -1, -1);
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        close_2 = new QPushButton(edit);
+        close_2 = new QPushButton(top);
         close_2->setObjectName(QString::fromUtf8("close_2"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
@@ -114,7 +227,7 @@ public:
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/icons/back.png"), QSize(), QIcon::Normal, QIcon::Off);
         close_2->setIcon(icon);
-        close_2->setIconSize(QSize(50, 40));
+        close_2->setIconSize(QSize(23, 23));
 
         horizontalLayout->addWidget(close_2);
 
@@ -122,13 +235,13 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_21);
 
-        pushButton = new QPushButton(edit);
+        pushButton = new QPushButton(top);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setMinimumSize(QSize(60, 40));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/icons/reload.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton->setIcon(icon1);
-        pushButton->setIconSize(QSize(50, 40));
+        pushButton->setIconSize(QSize(23, 23));
 
         horizontalLayout->addWidget(pushButton);
 
@@ -136,7 +249,7 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_2);
 
-        close = new QPushButton(edit);
+        close = new QPushButton(top);
         close->setObjectName(QString::fromUtf8("close"));
         sizePolicy.setHeightForWidth(close->sizePolicy().hasHeightForWidth());
         close->setSizePolicy(sizePolicy);
@@ -144,12 +257,12 @@ public:
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/icons/close.png"), QSize(), QIcon::Normal, QIcon::Off);
         close->setIcon(icon2);
-        close->setIconSize(QSize(50, 40));
+        close->setIconSize(QSize(23, 23));
 
         horizontalLayout->addWidget(close);
 
 
-        verticalLayout_2->addLayout(horizontalLayout);
+        verticalLayout_2->addWidget(top);
 
         verticalSpacer_3 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
@@ -232,117 +345,147 @@ public:
 
         verticalLayout_2->addItem(verticalSpacer_2);
 
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalLayout_2->setContentsMargins(-1, 0, -1, -1);
-        horizontalSpacer_3 = new QSpacerItem(221, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
+        horizontalLayout_11->setContentsMargins(0, 10, 0, -1);
+        horizontalSpacer_22 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addItem(horizontalSpacer_3);
+        horizontalLayout_11->addItem(horizontalSpacer_22);
 
-        label = new QLabel(edit);
+        specification = new QWidget(edit);
+        specification->setObjectName(QString::fromUtf8("specification"));
+        verticalLayout_4 = new QVBoxLayout(specification);
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        verticalLayout_4->setContentsMargins(-1, 1, -1, 1);
+        verticalSpacer_7 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_4->addItem(verticalSpacer_7);
+
+        horizontalLayout_12 = new QHBoxLayout();
+        horizontalLayout_12->setObjectName(QString::fromUtf8("horizontalLayout_12"));
+        horizontalLayout_12->setContentsMargins(-1, 0, -1, -1);
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_12->addItem(horizontalSpacer_3);
+
+        label = new QLabel(specification);
         label->setObjectName(QString::fromUtf8("label"));
 
-        horizontalLayout_2->addWidget(label);
+        horizontalLayout_12->addWidget(label);
 
-        new_name = new QLineEdit(edit);
+        new_name = new QLineEdit(specification);
         new_name->setObjectName(QString::fromUtf8("new_name"));
         new_name->setMinimumSize(QSize(0, 35));
 
-        horizontalLayout_2->addWidget(new_name);
+        horizontalLayout_12->addWidget(new_name);
 
-        horizontalSpacer_4 = new QSpacerItem(218, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addItem(horizontalSpacer_4);
+        horizontalLayout_12->addItem(horizontalSpacer_4);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_2);
+        verticalLayout_4->addLayout(horizontalLayout_12);
 
-        verticalSpacer_6 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_8 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_2->addItem(verticalSpacer_6);
+        verticalLayout_4->addItem(verticalSpacer_8);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(-1, 0, -1, -1);
+        horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_12);
+
+        label_2 = new QLabel(specification);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        horizontalLayout_2->addWidget(label_2);
+
+        new_athor = new QLineEdit(specification);
+        new_athor->setObjectName(QString::fromUtf8("new_athor"));
+        new_athor->setMinimumSize(QSize(0, 35));
+
+        horizontalLayout_2->addWidget(new_athor);
+
+        horizontalSpacer_13 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_13);
+
+
+        verticalLayout_4->addLayout(horizontalLayout_2);
+
+        verticalSpacer_10 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_4->addItem(verticalSpacer_10);
 
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
         horizontalLayout_6->setContentsMargins(-1, 0, -1, -1);
-        horizontalSpacer_12 = new QSpacerItem(225, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_15 = new QSpacerItem(161, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        horizontalLayout_6->addItem(horizontalSpacer_12);
+        horizontalLayout_6->addItem(horizontalSpacer_15);
 
-        label_2 = new QLabel(edit);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_3 = new QLabel(specification);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
 
-        horizontalLayout_6->addWidget(label_2);
+        horizontalLayout_6->addWidget(label_3);
 
-        new_athor = new QLineEdit(edit);
-        new_athor->setObjectName(QString::fromUtf8("new_athor"));
-        new_athor->setMinimumSize(QSize(0, 35));
+        new_pub = new QLineEdit(specification);
+        new_pub->setObjectName(QString::fromUtf8("new_pub"));
+        new_pub->setMinimumSize(QSize(0, 35));
 
-        horizontalLayout_6->addWidget(new_athor);
+        horizontalLayout_6->addWidget(new_pub);
 
-        horizontalSpacer_13 = new QSpacerItem(219, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_16 = new QSpacerItem(187, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        horizontalLayout_6->addItem(horizontalSpacer_13);
+        horizontalLayout_6->addItem(horizontalSpacer_16);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_6);
+        verticalLayout_4->addLayout(horizontalLayout_6);
 
-        verticalSpacer_7 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_11 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_2->addItem(verticalSpacer_7);
+        verticalLayout_4->addItem(verticalSpacer_11);
 
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
         horizontalLayout_7->setContentsMargins(-1, 0, -1, -1);
-        horizontalSpacer_15 = new QSpacerItem(194, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_24 = new QSpacerItem(95, 11, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        horizontalLayout_7->addItem(horizontalSpacer_15);
+        horizontalLayout_7->addItem(horizontalSpacer_24);
 
-        label_3 = new QLabel(edit);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-
-        horizontalLayout_7->addWidget(label_3);
-
-        new_pub = new QLineEdit(edit);
-        new_pub->setObjectName(QString::fromUtf8("new_pub"));
-        new_pub->setMinimumSize(QSize(0, 35));
-
-        horizontalLayout_7->addWidget(new_pub);
-
-        horizontalSpacer_16 = new QSpacerItem(219, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        horizontalLayout_7->addItem(horizontalSpacer_16);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_7);
-
-        verticalSpacer_8 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        verticalLayout_2->addItem(verticalSpacer_8);
-
-        horizontalLayout_8 = new QHBoxLayout();
-        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
-        horizontalLayout_8->setContentsMargins(-1, 0, -1, -1);
-        horizontalSpacer_18 = new QSpacerItem(127, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        horizontalLayout_8->addItem(horizontalSpacer_18);
-
-        label_4 = new QLabel(edit);
+        label_4 = new QLabel(specification);
         label_4->setObjectName(QString::fromUtf8("label_4"));
 
-        horizontalLayout_8->addWidget(label_4);
+        horizontalLayout_7->addWidget(label_4);
 
-        new_year = new QLineEdit(edit);
+        new_year = new QLineEdit(specification);
         new_year->setObjectName(QString::fromUtf8("new_year"));
         new_year->setMinimumSize(QSize(0, 37));
 
-        horizontalLayout_8->addWidget(new_year);
+        horizontalLayout_7->addWidget(new_year);
 
-        horizontalSpacer_19 = new QSpacerItem(220, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_18 = new QSpacerItem(187, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        horizontalLayout_8->addItem(horizontalSpacer_19);
+        horizontalLayout_7->addItem(horizontalSpacer_18);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_8);
+        verticalLayout_4->addLayout(horizontalLayout_7);
+
+        verticalSpacer_6 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_4->addItem(verticalSpacer_6);
+
+
+        horizontalLayout_11->addWidget(specification);
+
+        horizontalSpacer_23 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_11->addItem(horizontalSpacer_23);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_11);
 
         verticalSpacer_9 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
@@ -385,7 +528,7 @@ public:
         textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
         sizePolicy.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
         textBrowser->setSizePolicy(sizePolicy);
-        textBrowser->setMaximumSize(QSize(400, 40));
+        textBrowser->setMaximumSize(QSize(400, 50));
 
         horizontalLayout_10->addWidget(textBrowser);
 
