@@ -141,8 +141,14 @@ background-color : #008080
          </sizepolicy>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
          <property name="topMargin">
-          <number>1</number>
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
          </property>
          <item>
           <spacer name="horizontalSpacer">

@@ -204,7 +204,7 @@ public:
         top->setSizePolicy(sizePolicy);
         horizontalLayout = new QHBoxLayout(top);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(-1, 1, -1, -1);
+        horizontalLayout->setContentsMargins(0, 0, 0, -1);
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
