@@ -26,6 +26,7 @@ class Ui_show_all
 public:
     QVBoxLayout *verticalLayout;
     QVBoxLayout *verticalLayout_2;
+    QWidget *top;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *pushButton;
@@ -48,20 +49,64 @@ public:
         if (show_all->objectName().isEmpty())
             show_all->setObjectName(QString::fromUtf8("show_all"));
         show_all->resize(800, 700);
+        show_all->setStyleSheet(QString::fromUtf8("#show_all\n"
+"{\n"
+"    background-color : rgb(14, 22, 33)\n"
+"}\n"
+"\n"
+"#top\n"
+"{\n"
+"    background-color : rgb(107, 107, 107)\n"
+"}\n"
+"\n"
+"#pushButton::hover\n"
+"{\n"
+"	background-color: rgb(206, 206, 206);\n"
+"}\n"
+"\n"
+"#pushButton\n"
+"{\n"
+"    background-color : rgb(140, 140, 140) ;\n"
+"    border-color: rgb(0, 0, 0);\n"
+"}\n"
+"#close\n"
+"{\n"
+"    background-color : rgb(140, 140, 140) ;\n"
+"}\n"
+"\n"
+"#close::hover\n"
+"{\n"
+"    background-color : red \n"
+"}\n"
+"\n"
+"#textBrowser_2\n"
+"{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(39, 104, 153);\n"
+"}\n"
+"\n"
+"#textBrowser\n"
+"{\n"
+"	font: 10pt \"MS Shell Dlg 2\";\n"
+"    color: rgb(79, 59, 33);\n"
+"    background-color : #f1e9de\n"
+"}"));
         verticalLayout = new QVBoxLayout(show_all);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(5, 0, 5, 5);
+        verticalLayout->setContentsMargins(0, 0, 0, 5);
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(-1, -1, -1, 0);
-        horizontalLayout = new QHBoxLayout();
+        top = new QWidget(show_all);
+        top->setObjectName(QString::fromUtf8("top"));
+        horizontalLayout = new QHBoxLayout(top);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(-1, 0, -1, 0);
+        horizontalLayout->setContentsMargins(-1, 1, -1, 1);
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        pushButton = new QPushButton(show_all);
+        pushButton = new QPushButton(top);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
@@ -72,7 +117,7 @@ public:
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/icons/back.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton->setIcon(icon);
-        pushButton->setIconSize(QSize(60, 40));
+        pushButton->setIconSize(QSize(23, 23));
 
         horizontalLayout->addWidget(pushButton);
 
@@ -80,7 +125,7 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_7);
 
-        close = new QPushButton(show_all);
+        close = new QPushButton(top);
         close->setObjectName(QString::fromUtf8("close"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(60);
@@ -91,12 +136,12 @@ public:
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/icons/close.png"), QSize(), QIcon::Normal, QIcon::Off);
         close->setIcon(icon1);
-        close->setIconSize(QSize(60, 40));
+        close->setIconSize(QSize(23, 23));
 
         horizontalLayout->addWidget(close);
 
 
-        verticalLayout_2->addLayout(horizontalLayout);
+        verticalLayout_2->addWidget(top);
 
         verticalSpacer_3 = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
@@ -174,7 +219,7 @@ public:
         textBrowser->setHtml(QApplication::translate("show_all", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.05594pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.05594pt;\"><br /></p></body></html>", nullptr));
     } // retranslateUi
 

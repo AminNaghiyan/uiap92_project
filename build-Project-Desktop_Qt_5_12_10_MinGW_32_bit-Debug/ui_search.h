@@ -183,7 +183,7 @@ public:
 "\n"
 "#textBrowser_2\n"
 "{\n"
-"	background-color: rgb(0, 0, 0);\n"
+"	background-color: #f1e9de;\n"
 "	color: rgb(178, 34, 34);\n"
 "	font: 10pt \"MS Shell Dlg 2\";\n"
 "}"));
@@ -546,6 +546,11 @@ public:
         label_3->setText(QApplication::translate("search", "Publisher :", nullptr));
         label_4->setText(QApplication::translate("search", "Year of publication :", nullptr));
         pushButton->setText(QApplication::translate("search", "Search", nullptr));
+        textBrowser_2->setHtml(QApplication::translate("search", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
     } // retranslateUi
 
 };
