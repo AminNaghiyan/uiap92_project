@@ -27,6 +27,7 @@ class Ui_add_to_category
 public:
     QVBoxLayout *verticalLayout;
     QVBoxLayout *verticalLayout_2;
+    QWidget *top;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *back;
@@ -71,25 +72,106 @@ public:
         if (add_to_category->objectName().isEmpty())
             add_to_category->setObjectName(QString::fromUtf8("add_to_category"));
         add_to_category->resize(800, 700);
+        add_to_category->setStyleSheet(QString::fromUtf8("#add_to_category\n"
+"{\n"
+"background-color : rgb(14, 22, 33)\n"
+"}\n"
+"\n"
+"#top\n"
+"{\n"
+"background-color : rgb(107, 107, 107)\n"
+"}\n"
+"\n"
+"#back::hover\n"
+"{\n"
+"	background-color: rgb(206, 206, 206);\n"
+"}\n"
+"\n"
+"#back\n"
+"{\n"
+"background-color : rgb(140, 140, 140) ;\n"
+"border-color: rgb(0, 0, 0);\n"
+"}\n"
+"#close\n"
+"{\n"
+"background-color : rgb(140, 140, 140) ;\n"
+"}\n"
+"\n"
+"#close::hover\n"
+"{\n"
+"background-color : red \n"
+"}\n"
+"\n"
+"#reload::hover\n"
+"{\n"
+"	background-color: rgb(206, 206, 206);\n"
+"}\n"
+"\n"
+"#reload\n"
+"{\n"
+"background-color : rgb(140, 140, 140) ;\n"
+"border-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"#textBrowser\n"
+"{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(39, 104, 153);\n"
+"}\n"
+"#textBrowser_2\n"
+"{\n"
+"    color: rgb(255, 255, 255);\n"
+"	background-color: rgb(39, 104, 153);\n"
+"}\n"
+"\n"
+"#category_name\n"
+"{\n"
+"color: rgb(79, 59, 33);\n"
+"background-color : rgb(176, 196, 222)\n"
+"}\n"
+"\n"
+"#book_name\n"
+"{\n"
+"color: rgb(79, 59, 33);\n"
+"background-colo"
+                        "r : rgb(176, 196, 222)\n"
+"}\n"
+"\n"
+"#textBrowser_3\n"
+"{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"	color: rgb(178, 34, 34);\n"
+"	font: 10pt \"MS Shell Dlg 2\";\n"
+"}\n"
+"\n"
+"#add\n"
+"{\n"
+"	color: rgb(255, 255, 255);\n"
+"	font: 10pt \"MS Shell Dlg 2\";\n"
+"    background-color: rgb(39, 104, 153) ;\n"
+"}"));
         verticalLayout = new QVBoxLayout(add_to_category);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, -1);
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(-1, 0, -1, 0);
-        horizontalLayout = new QHBoxLayout();
+        top = new QWidget(add_to_category);
+        top->setObjectName(QString::fromUtf8("top"));
+        horizontalLayout = new QHBoxLayout(top);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(-1, 0, -1, -1);
+        horizontalLayout->setContentsMargins(-1, 1, -1, -1);
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        back = new QPushButton(add_to_category);
+        back = new QPushButton(top);
         back->setObjectName(QString::fromUtf8("back"));
         back->setMinimumSize(QSize(60, 40));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/icons/back.png"), QSize(), QIcon::Normal, QIcon::Off);
         back->setIcon(icon);
-        back->setIconSize(QSize(50, 40));
+        back->setIconSize(QSize(30, 30));
 
         horizontalLayout->addWidget(back);
 
@@ -97,13 +179,13 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_2);
 
-        reload = new QPushButton(add_to_category);
+        reload = new QPushButton(top);
         reload->setObjectName(QString::fromUtf8("reload"));
         reload->setMinimumSize(QSize(60, 40));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/icons/reload.png"), QSize(), QIcon::Normal, QIcon::Off);
         reload->setIcon(icon1);
-        reload->setIconSize(QSize(50, 40));
+        reload->setIconSize(QSize(30, 30));
 
         horizontalLayout->addWidget(reload);
 
@@ -111,18 +193,18 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_3);
 
-        close = new QPushButton(add_to_category);
+        close = new QPushButton(top);
         close->setObjectName(QString::fromUtf8("close"));
         close->setMinimumSize(QSize(60, 40));
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/icons/close.png"), QSize(), QIcon::Normal, QIcon::Off);
         close->setIcon(icon2);
-        close->setIconSize(QSize(50, 40));
+        close->setIconSize(QSize(30, 30));
 
         horizontalLayout->addWidget(close);
 
 
-        verticalLayout_2->addLayout(horizontalLayout);
+        verticalLayout_2->addWidget(top);
 
         verticalSpacer_2 = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
@@ -322,7 +404,7 @@ public:
         textBrowser_3->setHtml(QApplication::translate("add_to_category", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.05594pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.05594pt;\"><br /></p></body></html>", nullptr));
     } // retranslateUi
 
