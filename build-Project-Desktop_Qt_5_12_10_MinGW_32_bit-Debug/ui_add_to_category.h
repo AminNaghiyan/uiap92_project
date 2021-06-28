@@ -224,7 +224,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
         textBrowser->setSizePolicy(sizePolicy);
-        textBrowser->setMaximumSize(QSize(16777215, 76));
+        textBrowser->setMaximumSize(QSize(16777215, 80));
 
         horizontalLayout_2->addWidget(textBrowser);
 
