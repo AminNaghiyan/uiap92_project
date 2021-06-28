@@ -32,6 +32,7 @@ MainWindow::MainWindow(QList <book> list , QWidget *parent)
     file.close() ;
 }
 
+
 MainWindow::~MainWindow()
 {
     delete ui;

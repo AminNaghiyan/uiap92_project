@@ -174,7 +174,7 @@ public:
 "{\n"
 "	color: rgb(255, 255, 255);\n"
 "	font: 10pt \"MS Shell Dlg 2\";\n"
-"background-color: rgb(39, 104, 153) ;\n"
+"    background-color: rgb(39, 104, 153) ;\n"
 "}\n"
 "#add_2::hover\n"
 "{\n"

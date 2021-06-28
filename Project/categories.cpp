@@ -1,5 +1,6 @@
 #include "categories.h"
 #include "ui_categories.h"
+#define category_file "category.txt"
 
 
 categories::categories( QList <book> list , QWidget *parent) :

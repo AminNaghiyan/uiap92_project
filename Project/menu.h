@@ -23,6 +23,7 @@ class menu : public QWidget
     Q_OBJECT
 
 public:
+
     QList <book> booklist ;
     explicit menu(QList <book> list ,QWidget *parent = nullptr);
     ~menu();

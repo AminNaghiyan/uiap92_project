@@ -96,7 +96,7 @@ background-color : rgb(176, 196, 222) ;
 {
 	color: rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(39, 104, 153) ;
+    background-color: rgb(39, 104, 153) ;
 }
 #add_2::hover
 {

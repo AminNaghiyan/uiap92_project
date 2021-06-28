@@ -17,6 +17,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+
     QList <book> booklist ;
     MainWindow(QList <book> list , QWidget *parent = nullptr);
     ~MainWindow();
